@@ -1,0 +1,81 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Reports{% endblock %}
+
+{% block content %}
+<form class="panel date-filter">
+    <div>
+        <label>From</label>
+        <input class="field" type="date" name="start" value="{{ start }}">
+    </div>
+    <div>
+        <label>To</label>
+        <input class="field" type="date" name="end" value="{{ end }}">
+    </div>
+    <button class="btn primary">Apply filter</button>
+    <a class="btn secondary" href="?">Last 30 days</a>
+</form>
+
+<section class="stat-grid compact">
+    <article class="mini-stat">
+        <span>Sales in selected period</span>
+        <b>Rs {{ totals.sales|default:0|floatformat:0 }}</b>
+    </article>
+    <article class="mini-stat">
+        <span>Number of bills</span>
+        <b>{{ totals.bills|default:0 }}</b>
+    </article>
+    <article class="mini-stat">
+        <span>Products tracked</span>
+        <b>{{ stock|length }}</b>
+    </article>
+</section>
+
+<div class="dashboard-grid">
+    <article class="panel chart-panel wide">
+        <div class="panel-head">
+            <div>
+                <h3>Sales trend</h3>
+                <p>Revenue by day for selected period</p>
+            </div>
+        </div>
+        <canvas id="reportSales" height="100"></canvas>
+    </article>
+
+    <article class="panel">
+        <h3>Top products by revenue</h3>
+        {% for p in top_products %}
+            <div class="stock-row">
+                <div>
+                    <b>{{ p.product__name }}</b>
+                    <small>{{ p.qty }} units sold</small>
+                </div>
+                <b>Rs {{ p.revenue|floatformat:0 }}</b>
+            </div>
+        {% empty %}
+            <p class="empty-state">No sales for this period.</p>
+        {% endfor %}
+    </article>
+
+    <article class="panel">
+        <h3>Inventory snapshot</h3>
+        {% for p in stock %}
+            <div class="stock-row">
+                <div>
+                    <b>{{ p.name }}</b>
+                    <small>{{ p.category|default:'General' }}</small>
+                </div>
+                <span>{{ p.stock_qty|floatformat:0 }} {{ p.unit }}</span>
+            </div>
+        {% empty %}
+            <p class="empty-state">No products available.</p>
+        {% endfor %}
+    </article>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    renderReport({{ chart_json|safe }});
+</script>
+{% endblock %}

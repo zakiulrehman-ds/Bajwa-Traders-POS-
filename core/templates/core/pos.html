@@ -1,0 +1,204 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Point of sale{% endblock %}
+
+{% block content %}
+<div class="pos-layout" x-data="posApp()">
+    <section class="pos-products">
+        <div class="pos-toolbar">
+            <input id="productSearch" class="field search-field" placeholder="Search products or scan barcode…" x-model="query" autocomplete="new-password">
+            <span class="tag">{{ products|length }} PRODUCTS</span>
+        </div>
+
+        <div class="category-pills">
+            <button class="category-pill selected" @click="category='all'">All items</button>
+            {% for c in categories %}
+                <button class="category-pill" @click="category='{{ c.id }}'">{{ c.name }}</button>
+            {% endfor %}
+        </div>
+
+        <div class="product-grid">
+            {% for p in products %}
+                <button class="product-tile" 
+                        @click='add({id:{{ p.id }}, name: "{{ p.name|escapejs }}", price: {{ p.sell_price }}, stock: {{ p.stock_qty }}, unit: "{{ p.unit }}", cat: "{{ p.category_id|default:"" }}"})' 
+                        x-show="matches({{ p.id }}, '{{ p.name|escapejs }}', '{{ p.sku|default:''|escapejs }}', '{{ p.category_id|default:'' }}')">
+                    <div class="product-photo">
+                        {% if p.image %}
+                            <img src="{{ p.image.url }}" alt="{{ p.name }}">
+                        {% else %}
+                            <span>▧</span>
+                        {% endif %}
+                    </div>
+                    <b>{{ p.name }}</b>
+                    <small>{{ p.company|default:p.category.name|default:'General' }}</small>
+                    <strong>Rs {{ p.sell_price|floatformat:0 }}</strong>
+                    <em>Stock: {{ p.stock_qty|floatformat:0 }} {{ p.unit }}</em>
+                </button>
+            {% endfor %}
+        </div>
+    </section>
+
+    <aside class="cart-panel">
+        <div class="cart-heading">
+            <div>
+                <h2>Current bill</h2>
+                <p>New customer transaction</p>
+            </div>
+            <button class="text-button" @click="clear()">Clear</button>
+        </div>
+
+        <div class="cart-customer">
+            <input class="field" placeholder="Customer name (optional)" x-model="customer" autocomplete="new-password">
+            <input class="field" placeholder="Phone (optional)" x-model="phone" autocomplete="new-password">
+        </div>
+
+        <div class="cart-lines">
+            <template x-for="item in items" :key="item.id">
+                <div class="cart-line">
+                    <div class="cart-line-info">
+                        <b x-text="item.name"></b>
+                        <small>Rs <span x-text="item.price"></span> / <span x-text="item.unit"></span></small>
+                    </div>
+                    <div class="qty-control">
+                        <button @click="changeQty(item.id, -1)">−</button>
+                        <span x-text="item.qty"></span>
+                        <button @click="changeQty(item.id, 1)">＋</button>
+                    </div>
+                    <b class="line-price" x-text="'Rs ' + (item.price * item.qty).toFixed(0)"></b>
+                </div>
+            </template>
+            <div class="empty-cart" x-show="!items.length">
+                Your bill is empty.<br>
+                <small>Tap a product to add it.</small>
+            </div>
+        </div>
+
+        <div class="cart-totals">
+            <div>
+                <span>Subtotal</span>
+                <b x-text="money(subtotal)"></b>
+            </div>
+            <div>
+                <label>Discount (Rs)</label>
+                <input class="field small-field" type="number" min="0" x-model.number="discount" autocomplete="new-password">
+            </div>
+            <div class="grand-total">
+                <span>Total payable</span>
+                <strong x-text="money(total)"></strong>
+            </div>
+            <div>
+                <label>Cash received (Rs)</label>
+                <input class="field small-field" type="number" min="0" x-model.number="paid" autocomplete="new-password">
+            </div>
+            <div>
+                <span>Change</span>
+                <b x-text="money(change)"></b>
+            </div>
+        </div>
+
+        <button class="btn primary checkout-btn" :disabled="!items.length" @click="checkout()">
+            SAVE & PRINT <kbd>F12</kbd>
+        </button>
+        <p class="pos-hint">Press F12 to save the bill and open its Urdu receipt.</p>
+    </aside>
+</div>
+
+<div id="posToast" class="toast"></div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function posApp() {
+        return {
+            query: '',
+            category: 'all',
+            items: [],
+            discount: 0,
+            paid: 0,
+            customer: '',
+            phone: '',
+            get subtotal() {
+                return this.items.reduce((s, i) => s + i.price * i.qty, 0);
+            },
+            get total() {
+                return Math.max(0, this.subtotal - (Number(this.discount) || 0));
+            },
+            get change() {
+                return Math.max(0, (Number(this.paid) || 0) - this.total);
+            },
+            money(v) {
+                return 'Rs ' + Number(v || 0).toLocaleString('en-PK', { maximumFractionDigits: 2 });
+            },
+            matches(id, name, sku, cat) {
+                return (this.category === 'all' || this.category === String(cat)) && 
+                       (`${name} ${sku}`.toLowerCase().includes(this.query.toLowerCase()));
+            },
+            add(p) {
+                let i = this.items.find(x => x.id === p.id);
+                if (i) {
+                    if (i.qty < p.stock) {
+                        i.qty++;
+                    } else {
+                        toast('Not enough stock.');
+                        return;
+                    }
+                } else if (p.stock > 0) {
+                    this.items.push({ ...p, qty: 1 });
+                } else {
+                    toast('This product is out of stock.');
+                    return;
+                }
+                this.paid = this.total;
+            },
+            changeQty(id, n) {
+                let i = this.items.find(x => x.id === id);
+                if (!i) return;
+                i.qty += n;
+                if (i.qty <= 0) {
+                    this.items = this.items.filter(x => x.id !== id);
+                }
+                this.paid = this.total;
+            },
+            clear() {
+                this.items = [];
+                this.discount = 0;
+                this.paid = 0;
+            },
+            async checkout() {
+                if (!this.items.length) return;
+                let r = await fetch('{% url "checkout" %}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    },
+                    body: JSON.stringify({
+                        items: this.items.map(i => ({ id: i.id, qty: i.qty })),
+                        discount: this.discount,
+                        paid: this.paid,
+                        customer: this.customer,
+                        phone: this.phone
+                    })
+                });
+                let d = await r.json();
+                if (!r.ok || !d.ok) {
+                    toast(d.error || 'Could not save bill.');
+                    return;
+                }
+                window.location.href = d.receipt_url;
+            },
+            init() {
+                this.$watch('total', value => {
+                    this.paid = value;
+                });
+                window.addEventListener('keydown', e => {
+                    if (e.key === 'F12') {
+                        e.preventDefault();
+                        this.checkout();
+                    }
+                });
+            }
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Products{% endblock %}
+
+{% block content %}
+<div class="page-actions">
+    <form class="filter-bar" hx-get="{% url 'products' %}" hx-trigger="keyup changed delay:300ms from:input, change from:select" hx-target="#products-table" hx-select="#products-table" hx-swap="outerHTML" autocomplete="off">
+        <input class="field" name="q" value="{{ q }}" placeholder="Search name or SKU…" autocomplete="off">
+        <select class="field" name="category">
+            <option value="">All categories</option>
+            {% for c in categories %}
+                <option value="{{ c.id }}" {% if selected_category == c.id|stringformat:'s' %}selected{% endif %}>
+                    {{ c.name }}
+                </option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn secondary">Filter</button>
+    </form>
+    <a class="btn primary" href="{% url 'product_add' %}">＋ Add product</a>
+</div>
+
+{% include 'core/product_table.html' %}
+{% endblock %}

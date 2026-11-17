@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ heading }} | Bajwa Traders{% endblock %}
+
+{% block page_title %}{{ heading }}{% endblock %}
+
+{% block content %}
+<style>
+    .product-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+    .product-form textarea,
+    .product-form select {
+        width: 100% !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        padding: 9px 12px !important;
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 14px !important;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .product-form textarea {
+        min-height: 76px;
+        resize: vertical;
+    }
+    .product-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
+    .product-form textarea:focus,
+    .product-form select:focus {
+        border-color: #123c32 !important;
+        box-shadow: 0 0 0 3px rgba(18, 60, 50, 0.14) !important;
+        outline: none !important;
+    }
+    .product-form input[type="checkbox"] {
+        width: 18px !important;
+        height: 18px !important;
+        accent-color: #123c32;
+        cursor: pointer;
+    }
+</style>
+
+<div class="max-w-2xl mx-auto">
+    <form method="post" enctype="multipart/form-data" class="panel form-panel product-form" autocomplete="off">
+        {% csrf_token %}
+        <div class="flex items-center justify-between mb-4">
+            <h3 class="m-0">{{ heading }}</h3>
+            <a href="{% url 'products' %}" class="text-xs font-semibold text-slate-500 hover:text-slate-800 underline">
+                Cancel
+            </a>
+        </div>
+
+        <div class="form-grid">
+            {% for field in form %}
+                <div class="form-field {% if field.name == 'active' %}check-field{% endif %}">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.errors %}
+                        <small class="text-red-600 block mt-1">{{ field.errors|striptags }}</small>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="form-actions mt-6 flex items-center justify-end gap-3">
+            <a class="btn secondary" href="{% url 'products' %}">Cancel</a>
+            <button type="submit" class="btn primary">Save product</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

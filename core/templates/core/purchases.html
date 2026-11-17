@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Stock receiving{% endblock %}
+
+{% block content %}
+<div class="page-actions">
+    <p class="muted">Record supplier deliveries to increase inventory.</p>
+    <a class="btn primary" href="{% url 'purchase_add' %}">＋ Record purchase</a>
+</div>
+
+<div class="panel table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Reference</th>
+                <th>Supplier</th>
+                <th>Invoice</th>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Paid</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in purchases %}
+                <tr>
+                    <td class="font-bold text-slate-900">PUR-{{ p.pk }}</td>
+                    <td>{{ p.supplier|default:'—' }}</td>
+                    <td class="font-mono text-xs">{{ p.invoice_no|default:'—' }}</td>
+                    <td>{{ p.created_at|date:'d M Y' }}</td>
+                    <td class="font-semibold text-slate-800">Rs {{ p.total }}</td>
+                    <td class="font-semibold text-emerald-800">Rs {{ p.paid_amount }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" class="empty-state text-center py-6 text-slate-500">No purchases recorded yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

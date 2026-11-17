@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Receive stock{% endblock %}
+
+{% block content %}
+<form method="post" class="panel form-panel" x-data="purchaseForm()" autocomplete="off">
+    {% csrf_token %}
+    
+    <div class="flex items-center justify-between mb-4">
+        <h3 class="m-0">Receive stock</h3>
+        <a href="{% url 'purchases' %}" class="text-xs font-semibold text-slate-500 hover:text-slate-800 underline">
+            Cancel
+        </a>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-field">
+            <label>Supplier</label>
+            <select class="field" name="supplier" autocomplete="off">
+                <option value="">Select supplier</option>
+                {% for s in suppliers %}
+                    <option value="{{ s.id }}">{{ s.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label>Supplier invoice number</label>
+            <input class="field" name="invoice_no" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+            <label>Amount paid (Rs)</label>
+            <input class="field" type="number" step=".01" name="paid" value="0" autocomplete="off">
+        </div>
+
+        <div class="form-field">
+            <label>Note</label>
+            <input class="field" name="note" autocomplete="off">
+        </div>
+    </div>
+
+    <h3 class="section-title mt-4 mb-2 text-sm font-bold text-slate-800">Purchase items</h3>
+
+    <template x-for="(row, index) in rows" :key="index">
+        <div class="purchase-row flex items-center gap-3 mb-3">
+            <select class="field flex-1" name="product" autocomplete="off">
+                <option value="">Select product</option>
+                {% for p in products %}
+                    <option value="{{ p.id }}">{{ p.name }}</option>
+                {% endfor %}
+            </select>
+            
+            <input class="field w-32" name="qty" type="number" min=".01" step=".01" placeholder="Quantity" autocomplete="off">
+            
+            <input class="field w-32" name="cost" type="number" min="0" step=".01" placeholder="Unit cost" autocomplete="off">
+            
+            <button type="button" class="remove-row px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg cursor-pointer" @click="rows.splice(index, 1)">×</button>
+        </div>
+    </template>
+
+    <button type="button" class="btn secondary mb-4" @click="rows.push(1)">＋ Add another item</button>
+
+    <div class="form-actions flex items-center justify-end gap-3 pt-4 border-t border-slate-200">
+        <a class="btn secondary" href="{% url 'purchases' %}">Cancel</a>
+        <button type="submit" class="btn primary">Save purchase & update stock</button>
+    </div>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function purchaseForm() {
+        return {
+            rows: [1]
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,5 @@
+Django>=5.1,<6.0
+waitress>=3.0
+Pillow>=10.0
+qrcode[pil]>=7.4
+whitenoise>=6.8

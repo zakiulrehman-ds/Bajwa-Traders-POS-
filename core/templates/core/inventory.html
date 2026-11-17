@@ -1,0 +1,120 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Stock movements{% endblock %}
+
+{% block content %}
+<style>
+    .inventory-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+    .inventory-form textarea,
+    .inventory-form select {
+        width: 100% !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        padding: 9px 12px !important;
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 14px !important;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .inventory-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
+    .inventory-form textarea:focus,
+    .inventory-form select:focus {
+        border-color: #123c32 !important;
+        box-shadow: 0 0 0 3px rgba(18, 60, 50, 0.14) !important;
+        outline: none !important;
+    }
+</style>
+
+<div class="two-col">
+    <form method="post" class="panel form-panel inventory-form" autocomplete="off">
+        {% csrf_token %}
+        <h3 class="m-0 mb-1">Manual stock adjustment</h3>
+        <p class="muted" style="margin-bottom:16px">
+            Use this for damaged goods, opening corrections or physical stock counts. Supplier deliveries should be recorded under Purchases.
+        </p>
+
+        <div class="form-field">
+            <label>Product</label>
+            <select class="field" name="product" required>
+                <option value="">Choose product</option>
+                {% for p in products %}
+                    <option value="{{ p.id }}">{{ p.name }} ({{ p.stock_qty|floatformat:0 }} {{ p.unit }})</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label>Adjustment</label>
+            <select class="field" name="direction">
+                <option value="add">Add stock (+)</option>
+                <option value="remove">Remove stock (−)</option>
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label>Quantity</label>
+            <input class="field" type="number" name="qty" step=".01" min=".01" required autocomplete="off">
+        </div>
+
+        <div class="form-field">
+            <label>Reason / note</label>
+            <input class="field" name="note" placeholder="e.g. damaged stock or stock count correction" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn primary full">Save adjustment</button>
+    </form>
+
+    <div class="panel">
+        <h3>Current stock levels</h3>
+        {% for p in stock_products %}
+            <div class="stock-row">
+                <div>
+                    <b>{{ p.name }}</b>
+                    <small>{{ p.category|default:'General' }} · Reorder at {{ p.reorder_level|floatformat:0 }}</small>
+                </div>
+                <span class="stock-number" style="color:{% if p.low_stock %}#c65d42{% else %}#24765d{% endif %}">
+                    {{ p.stock_qty|floatformat:0 }} {{ p.unit }}
+                </span>
+            </div>
+        {% empty %}
+            <p class="empty-state">No products created.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="panel" style="margin-top:16px">
+    <h3>Recent stock movements</h3>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Product</th>
+                    <th>Movement</th>
+                    <th>Reason</th>
+                    <th>Reference</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for m in movements %}
+                    <tr>
+                        <td>{{ m.created_at|date:'d M Y, h:i A' }}</td>
+                        <td><b>{{ m.product.name }}</b></td>
+                        <td style="color:{% if m.qty < 0 %}#bf5944{% else %}#27845e{% endif %};font-weight:700">
+                            {% if m.qty > 0 %}+{% endif %}{{ m.qty|floatformat:0 }} {{ m.product.unit }}
+                        </td>
+                        <td>{{ m.get_reason_display }}</td>
+                        <td>{{ m.reference|default:'—' }}</td>
+                        <td>{{ m.note|default:'—' }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="6" class="empty-state">No stock movements yet.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

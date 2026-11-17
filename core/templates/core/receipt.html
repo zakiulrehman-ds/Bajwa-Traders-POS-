@@ -1,0 +1,133 @@
+{% load static %}
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>رسید {{ sale.bill_no }} | {{ shop.shop_name }}</title>
+    <link rel="stylesheet" href="{% static 'core/app.css' %}">
+    <style>
+        @media print {
+            body.receipt-body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background-color: #ffffff !important;
+            }
+            .receipt-tools {
+                display: none !important;
+            }
+            .receipt {
+                width: 100% !important;
+                max-width: 80mm !important;
+                margin: 0 auto !important;
+                padding: 5mm !important;
+                box-shadow: none !important;
+            }
+            @page {
+                size: auto;
+                margin: 0mm;
+            }
+        }
+    </style>
+</head>
+<body class="receipt-body">
+    <div class="receipt-tools">
+        <a href="{% url 'pos' %}" class="btn secondary">بلنگ پر واپس جائیں</a>
+        <button class="btn primary" type="button" onclick="window.print()">رسید پرنٹ کریں</button>
+    </div>
+
+    <main class="receipt" aria-label="Customer receipt">
+        <header class="receipt-header">
+            <h1>{{ shop.shop_name_urdu|default:shop.shop_name }}</h1>
+            <h2>{{ shop.shop_name }}</h2>
+            {% if shop.address %}
+                <p>{{ shop.address }}</p>
+            {% endif %}
+            {% if shop.phone %}
+                <p>فون: {{ shop.phone }}</p>
+            {% endif %}
+        </header>
+
+        <div class="receipt-rule"></div>
+
+        <section class="receipt-meta">
+            <span>بل نمبر: {{ sale.bill_no }}</span>
+            <span>{{ sale.created_at|date:'d-m-Y h:i A' }}</span>
+        </section>
+
+        {% if sale.customer_name or sale.customer_phone %}
+            <p class="receipt-customer">
+                {% if sale.customer_name %}گاہک: {{ sale.customer_name }}{% endif %}
+                {% if sale.customer_phone %} &nbsp; {{ sale.customer_phone }}{% endif %}
+            </p>
+        {% endif %}
+
+        <div class="receipt-rule"></div>
+
+        <table class="receipt-table">
+            <thead>
+                <tr>
+                    <th class="item-col">آئٹم</th>
+                    <th>تعداد</th>
+                    <th>قیمت</th>
+                    <th>رقم</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in sale.items.all %}
+                    <tr>
+                        <td class="item-col">{{ item.product.urdu_name|default:item.product.name }}</td>
+                        <td>{{ item.qty|floatformat:-2 }}</td>
+                        <td>{{ item.unit_price|floatformat:0 }}</td>
+                        <td>{{ item.line_total|floatformat:0 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="receipt-rule"></div>
+
+        <section class="receipt-total">
+            <p><span>ذیلی رقم</span><b>Rs {{ sale.subtotal|floatformat:0 }}</b></p>
+            <p><span>رعایت</span><b>Rs {{ sale.discount|floatformat:0 }}</b></p>
+            <p class="grand"><span>کل رقم</span><b>Rs {{ sale.total|floatformat:0 }}</b></p>
+            <p><span>وصول شدہ</span><b>Rs {{ sale.paid|floatformat:0 }}</b></p>
+            <p><span>واپس</span><b>Rs {{ sale.change|floatformat:0 }}</b></p>
+        </section>
+
+        <div class="receipt-rule"></div>
+
+        <p class="receipt-thanks">{{ shop.receipt_footer }}</p>
+
+        {% if qr_data %}
+            <figure class="receipt-qr-wrap">
+                <img class="receipt-qr" src="{{ qr_data }}" alt="اس بل کا QR کوڈ">
+                <figcaption>ریکارڈ دیکھنے کے لیے QR کوڈ اسکین کریں</figcaption>
+            </figure>
+        {% endif %}
+
+        <small class="receipt-code">{{ sale.bill_no }}</small>
+    </main>
+
+    <script>
+        (() => {
+            const params = new URLSearchParams(window.location.search);
+            if (!params.has('autoprint')) return;
+            
+            let redirected = false;
+            window.addEventListener('afterprint', () => {
+                if (redirected) return;
+                redirected = true;
+                window.location.replace("{% url 'pos' %}");
+            });
+
+            window.addEventListener('load', async () => {
+                if (document.fonts && document.fonts.ready) {
+                    await document.fonts.ready;
+                }
+                window.setTimeout(() => window.print(), 450);
+            });
+        })();
+    </script>
+</body>
+</html>

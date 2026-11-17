@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block page_title %}Shop settings{% endblock %}
+
+{% block content %}
+<form method="post" class="panel form-panel">
+  {% csrf_token %}
+  <h3>Shop identity &amp; receipt settings</h3>
+  <p class="muted">These details appear on printed customer receipts.</p>
+
+  <div class="form-grid">
+    {% for f in form %}
+      <div class="form-field">
+        <label>{{ f.label }}</label>
+        {{ f }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn primary">Save settings</button>
+  </div>
+</form>
+
+<div class="panel info-panel">
+  <h3>Local data &amp; backup</h3>
+  <p>Store records are saved in <code>db.sqlite3</code> and backed up automatically every day at <strong>9:00 PM</strong> to <code>backups\</code> and drive <code>D:</code>.</p>
+</div>
+{% endblock %}
