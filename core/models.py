@@ -87,7 +87,6 @@ class SaleItem(models.Model):
 
 class ShopSetting(models.Model):
     shop_name = models.CharField(max_length=160, default='Bajwa Traders')
-    shop_name_urdu = models.CharField(max_length=160, default='باجوہ ٹریڈرز')
     address = models.CharField(max_length=240, blank=True)
     phone = models.CharField(max_length=50, blank=True)
     receipt_footer = models.CharField(max_length=240, default='آپ کا شکریہ! دوبارہ تشریف لائیں')
@@ -96,7 +95,6 @@ class ShopSetting(models.Model):
     def current(cls):
         obj, _ = cls.objects.get_or_create(pk=1)
         return obj
-
 
 class MasterReceipt(models.Model):
     STATUS_CHOICES = [

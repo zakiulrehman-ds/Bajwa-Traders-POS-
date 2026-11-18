@@ -8,73 +8,79 @@
     <button class="btn primary" onclick="window.print()">Print master receipt</button>
   </div>
   
-  <article id="master-print" class="rounded-xl border border-slate-200 bg-white p-5 font-sans">
-    <!-- Top Header with Logo & English Name Only -->
-    <div class="text-center">
-      <div class="flex justify-center mb-2">
-        <img src="{% static 'core/logo.png' %}" alt="Logo" class="w-12 h-12 object-contain">
-      </div>
-      <h2 class="text-2xl font-bold">{{ shop.shop_name }}</h2>
-      <h3 class="mt-1 text-lg font-bold">MASTER DISPATCH RECEIPT</h3>
+  <article id="master-print" class="rounded-xl border border-slate-200 bg-white p-5 font-sans" style="direction: ltr; text-align: left;">
+    <!-- Top Header with Larger Logo (96px) & Larger English Name -->
+    <div class="text-center" style="margin-bottom: 12px;">
+      <img src="{% static 'core/logo.png' %}" alt="Logo" style="width: 96px; height: 96px; object-fit: contain; margin: 0 auto 8px auto; display: block;">
+      <h2 style="font-size: 26px; font-weight: 800; margin: 0 0 4px 0; letter-spacing: 0.5px;">{{ shop.shop_name }}</h2>
+      <div style="width: 50%; height: 1px; background-color: #d1d5db; margin: 8px auto;"></div>
+      <h3 style="font-size: 14px; font-weight: 600; color: #374151; margin: 0 0 8px 0;">MASTER DISPATCH RECEIPT</h3>
     </div>
+    
     <hr class="my-3">
-    <div class="flex justify-between text-sm">
-      <b>{{ master.master_no }}</b>
+    
+    <div class="flex justify-between text-sm" style="font-size: 13px; margin: 6px 0;">
+      <b>Master No: {{ master.master_no }}</b>
       <span>{{ master.created_at|date:"d-m-Y h:i A" }}</span>
     </div>
-    <p class="mt-2 text-sm">Status: {{ master.get_status_display }} | Customer bills: {{ sales|length }}</p>
-    {% if master.note %}<p class="mt-1 text-sm">Note: {{ master.note }}</p>{% endif %}
+    <p class="mt-1 text-sm" style="font-size: 13px; margin: 6px 0;">Status: {{ master.get_status_display }} | Customer bills: {{ sales|length }}</p>
+    {% if master.note %}<p class="mt-1 text-sm" style="font-size: 13px; margin: 6px 0;">Note: {{ master.note }}</p>{% endif %}
 
-    <!-- Bottom Urdu Section (RTL) -->
-    <div dir="rtl" style="text-align: right; font-family: 'Noto Nastaliq Urdu', Arial, sans-serif;" class="mt-4">
-      <h4 class="font-bold">اشیاء کی مجموعی مقدار</h4>
-      <table class="mt-2 w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-y">
-            <th class="py-2 text-right">پروڈکٹ</th>
-            <th class="py-2 text-center">مقدار</th>
-            <th class="py-2 text-left">رقم</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for item in product_totals %}
-          <tr class="border-b">
-            <td class="py-2">{{ item.name }}</td>
-            <td class="py-2 text-center">{{ item.qty|floatformat:0 }} {{ item.unit }}</td>
-            <td class="py-2 text-left">Rs {{ item.amount|floatformat:2 }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div class="mt-2 flex justify-between font-bold">
-        <span>کل یونٹس</span>
-        <span>{{ total_units|floatformat:0 }}</span>
-      </div>
+    <div class="receipt-rule" style="border-top: 1px dashed #9ca3af; margin: 8px 0;"></div>
 
-      <h4 class="mt-5 font-bold">کسٹمرز کے اصل بلز</h4>
-      <table class="mt-2 w-full text-sm border-collapse">
-        <thead>
-          <tr class="border-y">
-            <th class="py-2 text-right">بل نمبر</th>
-            <th class="py-2 text-right">کسٹمر</th>
-            <th class="py-2 text-left">رقم</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for sale in sales %}
-          <tr class="border-b">
-            <td class="py-2">{{ sale.bill_no }}</td>
-            <td class="py-2">{{ sale.customer_name|default:"واک ان" }}</td>
-            <td class="py-2 text-left">Rs {{ sale.total|floatformat:2 }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+    <!-- Product-wise consolidated quantities -->
+    <h4 class="mt-4 font-bold text-sm" style="font-size: 14px; font-weight: bold; margin-top: 12px;">Product-wise consolidated quantities</h4>
+    <table class="mt-2 w-full text-sm border-collapse" style="width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 13px;">
+      <thead>
+        <tr class="border-y" style="border-top: 1px solid #111; border-bottom: 1px solid #111;">
+          <th class="py-2 text-left" style="padding: 6px 4px; text-align: left;">Product</th>
+          <th class="py-2 text-center" style="padding: 6px 4px; text-align: center;">Qty</th>
+          <th class="py-2 text-right" style="padding: 6px 4px; text-align: right;">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in product_totals %}
+        <tr class="border-b" style="border-bottom: 1px solid #e5e7eb;">
+          <td class="py-2 text-left" style="padding: 6px 4px; text-align: left;">{{ item.urdu_name|default:item.name }}</td>
+          <td class="py-2 text-center" style="padding: 6px 4px; text-align: center;">{{ item.qty|floatformat:0 }}</td>
+          <td class="py-2 text-right" style="padding: 6px 4px; text-align: right;">Rs {{ item.amount|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="mt-2 flex justify-between font-bold text-sm" style="display: flex; justify-content: space-between; font-weight: bold; font-size: 13px; margin: 6px 0;">
+      <span>Total Units</span>
+      <span>{{ total_units|floatformat:0 }}</span>
+    </div>
 
-      <div class="mt-4 flex justify-between border-t pt-3 text-lg font-bold">
-        <span>کل رقم</span>
-        <span>Rs {{ grand_total|floatformat:2 }}</span>
-      </div>
+    <div class="receipt-rule" style="border-top: 1px dashed #9ca3af; margin: 8px 0;"></div>
+
+    <!-- Customer-wise original bills -->
+    <h4 class="mt-5 font-bold text-sm" style="font-size: 14px; font-weight: bold; margin-top: 14px;">Customer-wise original bills</h4>
+    <table class="mt-2 w-full text-sm border-collapse" style="width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 13px;">
+      <thead>
+        <tr class="border-y" style="border-top: 1px solid #111; border-bottom: 1px solid #111;">
+          <th class="py-2 text-left" style="padding: 6px 4px; text-align: left;">Bill No</th>
+          <th class="py-2 text-left" style="padding: 6px 4px; text-align: left;">Customer</th>
+          <th class="py-2 text-right" style="padding: 6px 4px; text-align: right;">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for sale in sales %}
+        <tr class="border-b" style="border-bottom: 1px solid #e5e7eb;">
+          <td class="py-2 text-left" style="padding: 6px 4px; text-align: left;">{{ sale.bill_no }}</td>
+          <td class="py-2 text-left" style="padding: 6px 4px; text-align: left;">{{ sale.customer_name|default:"Walk-in" }}</td>
+          <td class="py-2 text-right" style="padding: 6px 4px; text-align: right;">Rs {{ sale.total|floatformat:2 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="receipt-rule" style="border-top: 1px dashed #9ca3af; margin: 8px 0;"></div>
+
+    <div class="mt-4 flex justify-between border-t pt-3 text-lg font-bold" style="display: flex; justify-content: space-between; font-size: 15px; font-weight: bold; border-top: 1px solid #111; border-bottom: 1px solid #111; padding: 6px 0; margin-top: 10px;">
+      <span>Grand Total</span>
+      <span>Rs {{ grand_total|floatformat:2 }}</span>
     </div>
   </article>
 
@@ -94,7 +100,7 @@
   @page { size: 80mm auto; margin: 3mm; }
   body * { visibility: hidden !important; }
   #master-print, #master-print * { visibility: visible !important; }
-  #master-print { position: absolute; left: 0; top: 0; width: 74mm; border: 0 !important; box-shadow: none !important; padding: 0 !important; }
+  #master-print { position: absolute; left: 0; top: 0; width: 74mm; border: 0 !important; box-shadow: none !important; padding: 0 !important; direction: ltr !important; text-align: left !important; }
 }
 </style>
 {% endblock %}
