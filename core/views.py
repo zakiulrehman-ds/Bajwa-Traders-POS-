@@ -24,6 +24,7 @@ from django.views.decorators.http import require_POST
 from .forms import CategoryForm, ProductForm, SettingForm, SupplierForm
 from .models import (
     Category,
+    MasterReceipt,
     Product,
     Purchase,
     PurchaseItem,
@@ -622,4 +623,70 @@ def manifest(request):
         'background_color': '#f5f7fb',
         'theme_color': '#123c32',
         'icons': [],
+    })
+
+@login_required
+def master_receipts(request):
+    assigned_ids = MasterReceipt.sales.through.objects.values_list('sale_id', flat=True)
+    available_sales = Sale.objects.exclude(pk__in=assigned_ids).order_by('-created_at')[:200]
+    masters = MasterReceipt.objects.prefetch_related('sales').order_by('-created_at')[:50]
+    return render(request, 'core/master_receipts.html', base_context() | {
+        'available_sales': available_sales,
+        'master_receipts': masters,
+    })
+
+
+@login_required
+@require_POST
+def master_receipt_create(request):
+    raw_ids = request.POST.getlist('sale_ids')
+    ids = list(dict.fromkeys(int(x) for x in raw_ids if x.isdigit()))
+    if len(ids) < 1:
+        messages.error(request, 'Select at least one customer receipt.')
+        return redirect('master_receipts')
+    with transaction.atomic():
+        already_assigned = MasterReceipt.sales.through.objects.filter(sale_id__in=ids).exists()
+        if already_assigned:
+            messages.error(request, 'One or more selected bills are already included in a master receipt.')
+            return redirect('master_receipts')
+        selected = list(Sale.objects.filter(pk__in=ids).prefetch_related('items__product'))
+        if len(selected) != len(ids):
+            messages.error(request, 'One or more selected bills could not be found.')
+            return redirect('master_receipts')
+        master = MasterReceipt.objects.create(created_by=request.user, note=request.POST.get('note', '')[:500])
+        master.sales.set(selected)
+    return redirect('master_receipt_detail', pk=master.pk)
+
+
+@login_required
+def master_receipt_detail(request, pk):
+    master = get_object_or_404(MasterReceipt.objects.prefetch_related('sales__items__product'), pk=pk)
+    if request.method == 'POST':
+        new_status = request.POST.get('status')
+        if new_status in dict(MasterReceipt.STATUS_CHOICES):
+            master.status = new_status
+            master.save(update_fields=['status'])
+            messages.success(request, 'Master receipt status updated.')
+            return redirect('master_receipt_detail', pk=master.pk)
+
+    product_totals = {}
+    sales = list(master.sales.all().order_by('created_at'))
+    for sale in sales:
+        for line in sale.items.all():
+            key = line.product_id
+            if key not in product_totals:
+                product_totals[key] = {
+                    'name': line.product.urdu_name or line.product.name,
+                    'unit': line.product.unit,
+                    'qty': Decimal('0'),
+                    'amount': Decimal('0'),
+                }
+            product_totals[key]['qty'] += line.qty
+            product_totals[key]['amount'] += line.line_total
+    return render(request, 'core/master_receipt_detail.html', base_context() | {
+        'master': master,
+        'sales': sales,
+        'product_totals': list(product_totals.values()),
+        'grand_total': sum((sale.total for sale in sales), Decimal('0.00')),
+        'total_units': sum((x['qty'] for x in product_totals.values()), Decimal('0')),
     })

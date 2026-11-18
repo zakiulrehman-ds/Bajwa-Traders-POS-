@@ -1786,3 +1786,968 @@ Quit the server with CTRL-BREAK.
 WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
 For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
 Watching for file changes with StatReloader
+[18/Nov/2026 14:50:01] "GET /pos/ HTTP/1.1" 200 20119
+[18/Nov/2026 14:50:02] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:06] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:16] "POST /pos/checkout/ HTTP/1.1" 200 92
+[18/Nov/2026 14:50:17] "GET /sales/35/receipt/?autoprint=1 HTTP/1.1" 200 6356
+[18/Nov/2026 14:50:17] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[18/Nov/2026 14:50:21] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:50:21] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:24] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:26] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:50:26] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:28] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:33] "GET /products/add/ HTTP/1.1" 200 17903
+[18/Nov/2026 14:50:33] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:35] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:36] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:50:36] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:50:38] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 14:50:38] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:38] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:50:40] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:46] "GET /categories/8/edit/ HTTP/1.1" 200 21788
+[18/Nov/2026 14:50:46] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:50:47] "GET /inventory/ HTTP/1.1" 200 33917
+[18/Nov/2026 14:50:48] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:48] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:50:50] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:53] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 14:50:53] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:50:55] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:50:58] "GET /purchases/add/ HTTP/1.1" 200 15502
+[18/Nov/2026 14:50:58] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:00] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:02] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 14:51:02] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:51:03] "GET /suppliers/ HTTP/1.1" 200 22970
+[18/Nov/2026 14:51:03] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:04] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:51:05] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:07] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 14:51:07] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:51:09] "GET /reports/ HTTP/1.1" 200 14508
+[18/Nov/2026 14:51:09] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:09] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:51:11] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:18] "GET /settings/ HTTP/1.1" 200 14634
+[18/Nov/2026 14:51:18] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:20] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:23] "GET /profile/ HTTP/1.1" 200 15789
+[18/Nov/2026 14:51:23] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:25] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:27] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:51:27] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:51:29] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 14:51:29] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:29] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:30] "GET /inventory/ HTTP/1.1" 200 33917
+[18/Nov/2026 14:51:30] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:31] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:51:32] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:33] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 14:51:33] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:51:35] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:51:35] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:35] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:51:37] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:39] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 14:51:39] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:51:41] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:51:41] "GET /sales/34/receipt/ HTTP/1.1" 200 6340
+[18/Nov/2026 14:51:41] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 14:51:43] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:52:22] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:52:24] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:52:26] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:52:27] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:52:27] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:52:30] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:52:39] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:52:39] "GET /static/core/app.css HTTP/1.1" 304 0
+[18/Nov/2026 14:52:39] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 14:52:41] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:52:41] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:52:41] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 14:52:43] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:53:34] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:34] "GET /static/core/app.css HTTP/1.1" 304 0
+[18/Nov/2026 14:53:34] "GET /static/core/app.js HTTP/1.1" 304 0
+[18/Nov/2026 14:53:36] "GET /static/core/favicon.png?v=2 HTTP/1.1" 304 0
+[18/Nov/2026 14:53:36] "GET /static/core/icon-192.png?v=2 HTTP/1.1" 304 0
+[18/Nov/2026 14:53:38] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:42] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:43] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:44] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:45] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:53:46] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:53:46] "GET /media/products/coco_cola.png HTTP/1.1" 304 0
+[18/Nov/2026 14:53:48] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:53:55] "GET /products/1/edit/ HTTP/1.1" 200 18205
+[18/Nov/2026 14:53:59] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:54:00] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 14:54:02] "GET /categories/8/edit/ HTTP/1.1" 200 21788
+[18/Nov/2026 14:54:12] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 14:54:14] "GET /inventory/ HTTP/1.1" 200 33917
+[18/Nov/2026 14:54:19] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 14:54:21] "GET /suppliers/ HTTP/1.1" 200 22970
+[18/Nov/2026 14:54:24] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 14:54:29] "GET /reports/ HTTP/1.1" 200 14508
+[18/Nov/2026 14:54:36] "GET /settings/ HTTP/1.1" 200 14634
+[18/Nov/2026 14:54:45] "GET /profile/ HTTP/1.1" 200 15789
+[18/Nov/2026 14:54:48] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:54:49] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:54:50] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:54:51] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:54:52] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 14:56:30] "GET /reports/ HTTP/1.1" 200 14508
+[18/Nov/2026 14:56:30] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:56:34] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:56:46] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 14:56:46] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:56:48] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:56:52] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 14:56:52] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:56:54] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:56:54] "GET /sales/35/receipt/ HTTP/1.1" 200 6356
+[18/Nov/2026 14:56:55] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 14:56:56] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:57:02] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 14:57:02] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 14:57:04] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 14:59:16,820] - Broken pipe from ('192.168.100.250', 49468)
+[18/Nov/2026 14:59:16,833] - Broken pipe from ('192.168.100.250', 49480)
+[18/Nov/2026 15:00:24] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:00:24] "GET /static/core/app.js HTTP/1.1" 304 0
+[18/Nov/2026 15:00:24] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:00:27] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:00:39] "GET /profile/ HTTP/1.1" 200 15789
+[18/Nov/2026 15:00:39] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:00:41] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:00:43] "POST /logout/ HTTP/1.1" 302 0
+[18/Nov/2026 15:00:43] "GET /login/ HTTP/1.1" 200 868
+Not Found: /sw.js
+[18/Nov/2026 15:00:45] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:12] "POST /login/ HTTP/1.1" 302 0
+[18/Nov/2026 15:01:12] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:01:12] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:14] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:23] "GET /profile/ HTTP/1.1" 200 15789
+[18/Nov/2026 15:01:23] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:25] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:34] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:01:34] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:36] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:42] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:01:42] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:44] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:45] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 15:01:45] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:47] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:49] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 15:01:49] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:01:51] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:01:59] "GET /inventory/ HTTP/1.1" 200 33917
+[18/Nov/2026 15:01:59] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:01] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:09] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 15:02:09] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:11] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:12] "GET /purchases/add/ HTTP/1.1" 200 15502
+[18/Nov/2026 15:02:12] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:14] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:15] "POST /purchases/add/ HTTP/1.1" 200 15954
+[18/Nov/2026 15:02:15] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:17] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:18] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 15:02:18] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:02:19] "GET /suppliers/ HTTP/1.1" 200 22970
+[18/Nov/2026 15:02:19] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:20] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:02:21] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:23] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 15:02:23] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:25] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:27] "GET /reports/ HTTP/1.1" 200 14508
+[18/Nov/2026 15:02:27] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:29] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:34] "GET /reports/?start=2026-10-21&end=2026-11-19 HTTP/1.1" 200 14508
+[18/Nov/2026 15:02:34] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:36] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:02:36] "GET /reports/? HTTP/1.1" 200 14508
+[18/Nov/2026 15:02:36] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:02:38] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:04:38] "GET /reports/? HTTP/1.1" 200 14508
+[18/Nov/2026 15:04:40] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:04:44] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 15:04:44] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:04:44] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:04:46] "GET /sales/32/receipt/ HTTP/1.1" 200 6340
+[18/Nov/2026 15:04:46] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 15:04:47] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:04:49] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:05:13] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:05:13] "GET /media/products/coco_cola.png HTTP/1.1" 304 0
+[18/Nov/2026 15:05:13] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:05:16] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:28:53] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:28:54] "GET /static/core/app.css HTTP/1.1" 304 0
+[18/Nov/2026 15:28:54] "GET /static/core/app.js HTTP/1.1" 304 0
+[18/Nov/2026 15:28:54] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:28:58] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:29:00] "GET /sales/ HTTP/1.1" 200 21326
+[18/Nov/2026 15:29:00] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:29:02] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:29:03] "GET /sales/35/receipt/ HTTP/1.1" 200 6356
+[18/Nov/2026 15:29:03] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 15:29:05] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:36:30] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:36:31] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:36:35] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:36:46] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:36:46] "GET /media/products/coco_cola.png HTTP/1.1" 304 0
+[18/Nov/2026 15:36:46] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:36:49] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:08] "POST /pos/checkout/ HTTP/1.1" 200 92
+[18/Nov/2026 15:37:08] "GET /sales/36/receipt/?autoprint=1 HTTP/1.1" 200 6340
+[18/Nov/2026 15:37:08] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[18/Nov/2026 15:37:14] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:37:14] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:18] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:19] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 15:37:19] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:21] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:23] "GET /products/add/ HTTP/1.1" 200 17903
+[18/Nov/2026 15:37:23] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:25] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:28] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 15:37:28] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:37:29] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 15:37:30] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:30] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:37:32] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:40] "GET /categories/8/edit/ HTTP/1.1" 200 21788
+[18/Nov/2026 15:37:40] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:37:41] "GET /inventory/ HTTP/1.1" 200 34353
+[18/Nov/2026 15:37:41] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:42] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:37:43] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:50] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 15:37:50] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:37:52] "GET /purchases/add/ HTTP/1.1" 200 15502
+Not Found: /sw.js
+[18/Nov/2026 15:37:52] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:37:52] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:37:54] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:37:55] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 15:37:55] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:37:57] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:00] "GET /suppliers/ HTTP/1.1" 200 22970
+[18/Nov/2026 15:38:00] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:03] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:09] "GET /sales/ HTTP/1.1" 200 21563
+[18/Nov/2026 15:38:09] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:11] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:11] "GET /sales/36/receipt/ HTTP/1.1" 200 6340
+[18/Nov/2026 15:38:11] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 15:38:13] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:14] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:38:14] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:38:16] "GET /reports/ HTTP/1.1" 200 14508
+[18/Nov/2026 15:38:16] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:16] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:38:18] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:26] "GET /settings/ HTTP/1.1" 200 14634
+[18/Nov/2026 15:38:26] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:28] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:33] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:38:33] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:35] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:38:53] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:38:53] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:38:55] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:40:46] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:40:46] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:40:50] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:40:53] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:40:54] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:40:56] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:42:54] "GET /sales/ HTTP/1.1" 200 21563
+[18/Nov/2026 15:42:54] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:42:57] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:42:57] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:46:12] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:46:12] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:46:15] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:46:24] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:46:24] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:46:26] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:46:31] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 15:46:31] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:46:33] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 15:46:33] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:46:33] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:46:34] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:46:34] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:46:35] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:46:37] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:52:54] "GET / HTTP/1.1" 200 20628
+[18/Nov/2026 15:52:54] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:52:57] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:53:14] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:53:14] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:53:16] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:53:31] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 15:53:31] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:53:32] "GET /inventory/ HTTP/1.1" 200 34353
+[18/Nov/2026 15:53:32] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:53:33] "GET /purchases/ HTTP/1.1" 200 14064
+[18/Nov/2026 15:53:33] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:53:33] "GET /static/core/app.css HTTP/1.1" 304 0
+[18/Nov/2026 15:53:34] "GET /suppliers/ HTTP/1.1" 200 22970
+[18/Nov/2026 15:53:34] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:53:35] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:53:35] "GET /sales/ HTTP/1.1" 200 21563
+[18/Nov/2026 15:53:35] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 15:53:37] "GET /sales/36/receipt/ HTTP/1.1" 200 6340
+[18/Nov/2026 15:53:37] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+Not Found: /sw.js
+[18/Nov/2026 15:53:37] "GET /sw.js HTTP/1.1" 404 8917
+Not Found: /sw.js
+[18/Nov/2026 15:53:39] "GET /sw.js HTTP/1.1" 404 8917
+[18/Nov/2026 15:53:43] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 15:53:43] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 15:53:45] "GET /sw.js HTTP/1.1" 404 8917
+W:\POS projects\POS\bajwa_traders\core\models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 18, 2026 - 14:49:13
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 18, 2026 - 16:02:13
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+W:\POS projects\POS\bajwa_traders\core\urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 18, 2026 - 16:02:33
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+W:\POS projects\POS\bajwa_traders\core\urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 18, 2026 - 16:03:06
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+[18/Nov/2026 16:04:09] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 16:04:10] "GET /static/core/app.js HTTP/1.1" 304 0
+[18/Nov/2026 16:04:10] "GET /media/products/coco_cola.png HTTP/1.1" 304 0
+[18/Nov/2026 16:04:10] "GET /manifest.json HTTP/1.1" 200 169
+[18/Nov/2026 16:04:12] "GET /static/core/favicon.ico?v=2 HTTP/1.1" 304 0
+Not Found: /sw.js
+[18/Nov/2026 16:04:14] "GET /sw.js HTTP/1.1" 404 9782
+[18/Nov/2026 16:04:19] "POST /pos/checkout/ HTTP/1.1" 200 92
+[18/Nov/2026 16:04:20] "GET /sales/37/receipt/?autoprint=1 HTTP/1.1" 200 6352
+[18/Nov/2026 16:04:21] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[18/Nov/2026 16:04:25] "GET /pos/ HTTP/1.1" 200 20117
+[18/Nov/2026 16:04:25] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 16:04:27] "GET /sw.js HTTP/1.1" 404 9782
+W:\POS projects\POS\bajwa_traders\core\urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 18, 2026 - 16:03:24
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 8, in <module>
+    class Category(models.Model):
+    ...<5 lines>...
+            return self.name
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\db\models\base.py", line 368, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\apps\registry.py", line 234, in register_model
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Conflicting 'category' models in application 'core': <class 'core.models.Category'> and <class 'core.urls.Category'>.
+W:\POS projects\POS\bajwa_traders\core\models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 136, in check_custom_error_handlers
+    handler = resolver.resolve_error_handler(status_code)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 732, in resolve_error_handler
+    callback = getattr(self.urlconf_module, "handler%s" % view_type, None)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 14, in <module>
+    path('pos/master-receipts/', views.master_receipts, name='master_receipts'),
+                                 ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'core.views' has no attribute 'master_receipts'
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 3, in <module>
+    from . import views
+  File "W:\POS projects\POS\bajwa_traders\core\views.py", line 359
+    return render(request, 'core/suppliers.html', base_context() | {
+                                                                   ^
+SyntaxError: '{' was never closed
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 3, in <module>
+    from . import views
+  File "W:\POS projects\POS\bajwa_traders\core\views.py", line 359
+    return render(request, 'core/suppliers.html', base_context() | {
+                                                                   ^
+SyntaxError: '{' was never closed
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 3, in <module>
+    from . import views
+  File "W:\POS projects\POS\bajwa_traders\core\views.py", line 359
+    return render(request, 'core/suppliers.html', base_context() | {
+                                                                   ^
+SyntaxError: '{' was never closed
+W:\POS projects\POS\bajwa_traders\core\models.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+    ~~^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
+    self.check(**check_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
+    all_issues = checks.run_checks(
+        app_configs=app_configs,
+    ...<2 lines>...
+        databases=databases,
+    )
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
+    path("", include("core.urls")),
+             ~~~~~~~^^^^^^^^^^^^^
+  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 3, in <module>
+    from . import views
+  File "W:\POS projects\POS\bajwa_traders\core\views.py", line 359
+    return render(request, 'core/suppliers.html', base_context() | {
+                                                                   ^
+SyntaxError: '{' was never closed
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+W:\POS projects\POS\bajwa_traders\core\urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): core.
+Run 'python manage.py migrate' to apply them.
+November 18, 2026 - 16:25:45
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+[18/Nov/2026 16:50:44] "GET / HTTP/1.1" 302 0
+[18/Nov/2026 16:50:44] "GET /login/?next=/ HTTP/1.1" 200 868
+[18/Nov/2026 16:50:44] "GET /static/core/app.css HTTP/1.1" 304 0
+[18/Nov/2026 16:50:56] "POST /login/?next=/ HTTP/1.1" 302 0
+[18/Nov/2026 16:50:56] "GET / HTTP/1.1" 200 18198
+[18/Nov/2026 16:50:56] "GET /static/core/app.js HTTP/1.1" 304 0
+[18/Nov/2026 16:51:00] "GET /pos/ HTTP/1.1" 200 20108
+[18/Nov/2026 16:51:00] "GET /media/products/coco_cola_WDS9JTv.png HTTP/1.1" 200 5606
+[18/Nov/2026 16:51:14] "GET /products/ HTTP/1.1" 200 15424
+[18/Nov/2026 16:51:14] "GET /media/products/coco_cola_WDS9JTv.png HTTP/1.1" 304 0
+[18/Nov/2026 16:51:17] "GET /categories/ HTTP/1.1" 200 21755
+[18/Nov/2026 16:51:18] "GET /inventory/ HTTP/1.1" 200 16904
+[18/Nov/2026 16:51:20] "GET /purchases/ HTTP/1.1" 200 13389
+[18/Nov/2026 16:51:22] "GET /suppliers/ HTTP/1.1" 200 18581
+[18/Nov/2026 16:51:22] "GET /suppliers/ HTTP/1.1" 200 18581
+[18/Nov/2026 16:58:04,726] - Broken pipe from ('192.168.100.250', 54334)
+[18/Nov/2026 16:58:04,716] - Broken pipe from ('192.168.100.250', 54350)
+W:\POS projects\POS\bajwa_traders\core\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): core.
+Run 'python manage.py migrate' to apply them.
+November 18, 2026 - 16:26:07
+Django version 5.2.19, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+Watching for file changes with StatReloader
+[18/Nov/2026 18:23:37] "GET / HTTP/1.1" 200 21218
+[18/Nov/2026 18:23:37] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[18/Nov/2026 18:23:40] "GET /sw.js HTTP/1.1" 404 9782
+[18/Nov/2026 18:25:01] "GET /inventory/ HTTP/1.1" 302 0

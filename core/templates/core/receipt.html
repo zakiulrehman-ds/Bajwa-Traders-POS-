@@ -40,6 +40,16 @@
             color: white;
         }
         /* Clean Header Layout with Divider */
+        .receipt-header {
+            text-align: center;
+        }
+        .receipt-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin: 0 auto 6px auto;
+            display: block;
+        }
         .receipt-header h1 {
             font-size: 22px;
             margin: 0 0 4px 0;
@@ -96,6 +106,7 @@
 
     <main class="receipt" aria-label="Customer receipt">
         <header class="receipt-header">
+            <img src="{% static 'core/logo.png' %}" alt="Logo" class="receipt-logo">
             <h1>{{ shop.shop_name_urdu|default:shop.shop_name }}</h1>
             <div class="header-divider"></div>
             <h2>{{ shop.shop_name }}</h2>
@@ -136,7 +147,7 @@
                 {% for item in sale.items.all %}
                     <tr>
                         <td class="item-col">{{ item.product.urdu_name|default:item.product.name }}</td>
-                        <td>{{ item.qty|floatformat:-2 }}</td>
+                        <td>{{ item.qty|floatformat:0 }}</td>
                         <td>{{ item.unit_price|floatformat:0 }}</td>
                         <td>{{ item.line_total|floatformat:0 }}</td>
                     </tr>

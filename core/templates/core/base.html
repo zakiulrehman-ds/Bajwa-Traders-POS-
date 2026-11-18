@@ -128,6 +128,13 @@
                 </svg>
                 <span>New Bill</span>
             </a>
+            <a class="nav-link {% if 'master_receipt' in request.resolver_match.url_name %}active{% endif %}" href="{% url 'master_receipts' %}">
+                <svg class="w-4 h-4 shrink-0 opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                </svg>
+                <span>Master Receipts</span>
+            </a>
 
             <div class="nav-label">MANAGEMENT</div>
             <a class="nav-link {% if request.resolver_match.url_name == 'products' or request.resolver_match.url_name == 'product_add' or request.resolver_match.url_name == 'product_edit' %}active{% endif %}" href="{% url 'products' %}">

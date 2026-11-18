@@ -96,3 +96,29 @@ class ShopSetting(models.Model):
     def current(cls):
         obj, _ = cls.objects.get_or_create(pk=1)
         return obj
+
+
+class MasterReceipt(models.Model):
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('dispatched', 'Dispatched'),
+        ('delivered', 'Delivered'),
+    ]
+    master_no = models.CharField(max_length=32, unique=True, blank=True)
+    sales = models.ManyToManyField(Sale, related_name='master_receipts')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+    created_at = models.DateTimeField(default=timezone.now)
+    note = models.TextField(blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.master_no:
+            self.master_no = f"MR-{timezone.now():%y%m%d}-{uuid.uuid4().hex[:6].upper()}"
+        super().save(*args, **kwargs)
+
+    @property
+    def grand_total(self):
+        return sum((sale.total for sale in self.sales.all()), Decimal('0.00'))
+
+    def __str__(self):
+        return self.master_no

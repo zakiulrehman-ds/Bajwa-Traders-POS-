@@ -11,6 +11,9 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),
     path('pos/', views.pos, name='pos'),
     path('pos/checkout/', views.checkout, name='checkout'),
+    path('pos/master-receipts/', views.master_receipts, name='master_receipts'),
+    path('pos/master-receipts/create/', views.master_receipt_create, name='master_receipt_create'),
+    path('pos/master-receipts/<int:pk>/', views.master_receipt_detail, name='master_receipt_detail'),
 
     # Products
     path('products/', views.products, name='products'),
