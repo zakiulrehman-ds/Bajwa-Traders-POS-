@@ -155,21 +155,47 @@
             margin-top: 4px;
         }
         @media print {
-            body {
+            html, body {
                 background-color: #ffffff !important;
+                margin: 0 !important;
                 padding: 0 !important;
+                width: 80mm !important;
                 display: block !important;
             }
             .receipt-tools {
                 display: none !important;
             }
             .receipt {
-                width: 100% !important;
-                max-width: 80mm !important;
+                width: 76mm !important;
+                max-width: 76mm !important;
                 margin: 0 auto !important;
-                padding: 0 !important;
+                padding: 4px 2px !important;
                 box-shadow: none !important;
                 border-radius: 0 !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .receipt-header {
+                margin-bottom: 6px !important;
+            }
+            .receipt-logo {
+                width: 64px !important;
+                height: 64px !important;
+                margin-bottom: 4px !important;
+            }
+            .receipt-header h1 {
+                font-size: 22px !important;
+            }
+            .receipt-table th, .receipt-table td {
+                padding: 3px 2px !important;
+                font-size: 12px !important;
+            }
+            .receipt-rule {
+                margin: 5px 0 !important;
+            }
+            .receipt-qr {
+                width: 76px !important;
+                height: 76px !important;
             }
             @page {
                 size: 80mm auto;

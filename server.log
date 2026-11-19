@@ -1,288 +1,495 @@
 Watching for file changes with StatReloader
-[18/Nov/2026 19:57:01] "GET / HTTP/1.1" 200 21218
-[18/Nov/2026 19:57:02] "GET /static/core/app.css HTTP/1.1" 304 0
-[18/Nov/2026 19:57:02] "GET /static/core/app.js HTTP/1.1" 304 0
-[18/Nov/2026 19:57:02] "GET /manifest.json HTTP/1.1" 200 169
-[18/Nov/2026 19:57:05] "GET /static/core/favicon.ico?v=2 HTTP/1.1" 304 0
+[19/Nov/2026 06:17:51] "GET / HTTP/1.1" 200 21067
+[19/Nov/2026 06:17:51] "GET /static/core/app.css HTTP/1.1" 304 0
+[19/Nov/2026 06:17:51] "GET /static/core/app.js HTTP/1.1" 304 0
+[19/Nov/2026 06:17:51] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:17:52] "GET /static/core/favicon.ico?v=2 HTTP/1.1" 304 0
 Not Found: /sw.js
-[18/Nov/2026 19:57:24] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:11:04] "GET / HTTP/1.1" 200 21218
-[18/Nov/2026 20:11:04] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:17:54] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:23:35] "GET /categories/ HTTP/1.1" 200 22259
+[19/Nov/2026 06:23:35] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:11:08] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:11:10] "GET /sales/ HTTP/1.1" 200 15461
-[18/Nov/2026 20:11:10] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:23:38] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:23:57] "POST /categories/ HTTP/1.1" 302 0
+[19/Nov/2026 06:23:57] "GET /categories/ HTTP/1.1" 200 24928
+[19/Nov/2026 06:23:57] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:11:13] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:11:13] "GET /sales/8/receipt/ HTTP/1.1" 200 6682
-[18/Nov/2026 20:11:13] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:11:13] "GET /static/core/logo.png HTTP/1.1" 200 1621976
+[19/Nov/2026 06:23:59] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:24:16] "POST /categories/ HTTP/1.1" 302 0
+[19/Nov/2026 06:24:16] "GET /categories/ HTTP/1.1" 200 27206
+[19/Nov/2026 06:24:16] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:11:15] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:12:09] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:12:10] "GET /media/products/coco_cola_WDS9JTv.png HTTP/1.1" 304 0
-[18/Nov/2026 20:12:10] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:24:18] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:24:43] "POST /categories/ HTTP/1.1" 302 0
+[19/Nov/2026 06:24:43] "GET /categories/ HTTP/1.1" 200 29444
+[19/Nov/2026 06:24:43] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:12:12] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:12:14] "GET /pos/master-receipts/ HTTP/1.1" 200 17404
-[18/Nov/2026 20:12:14] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:24:46] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:24:56] "POST /categories/ HTTP/1.1" 302 0
+[19/Nov/2026 06:24:56] "GET /categories/ HTTP/1.1" 200 31692
+[19/Nov/2026 06:24:56] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:12:16] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:12:25] "GET /pos/master-receipts/1/ HTTP/1.1" 200 17477
-[18/Nov/2026 20:12:25] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:12:25] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:24:58] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:24:59] "GET /categories/4/edit/ HTTP/1.1" 200 31324
+[19/Nov/2026 06:24:59] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:12:27] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:13:34] "GET / HTTP/1.1" 200 21218
-[18/Nov/2026 20:13:35] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:25:01] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:25:02] "POST /categories/4/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:25:02] "GET /categories/ HTTP/1.1" 200 31694
+[19/Nov/2026 06:25:02] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:13:37] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:14:51] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:14:52] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:25:04] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:25:40] "POST /categories/ HTTP/1.1" 302 0
+[19/Nov/2026 06:25:40] "GET /categories/ HTTP/1.1" 200 33980
+[19/Nov/2026 06:25:40] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:14:55] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:15:05] "GET /sales/ HTTP/1.1" 200 15461
-[18/Nov/2026 20:15:05] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:25:42] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:25:55] "GET /products/ HTTP/1.1" 200 16465
+[19/Nov/2026 06:25:55] "GET /media/products/coco_cola_WDS9JTv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:25:55] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:15:07] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:15:07] "GET /sales/8/receipt/ HTTP/1.1" 200 6682
-[18/Nov/2026 20:15:07] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:15:07] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:25:57] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:25:59] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:25:59] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:15:09] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:21:08] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:21:09] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:26:01] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:29:49] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:29:49] "GET /products/ HTTP/1.1" 200 18448
+[19/Nov/2026 06:29:50] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:29:50] "GET /media/products/pepsi.png HTTP/1.1" 200 3213
 Not Found: /sw.js
-[18/Nov/2026 20:21:12] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:21:28] "GET /pos/master-receipts/ HTTP/1.1" 200 17404
-[18/Nov/2026 20:21:28] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:29:52] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:30:04] "GET /products/2/edit/ HTTP/1.1" 200 18930
+[19/Nov/2026 06:30:04] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:21:30] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:21:42] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:21:42] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:30:06] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:30:10] "POST /products/2/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:30:10] "GET /products/ HTTP/1.1" 200 18445
+[19/Nov/2026 06:30:10] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:30:10] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:21:45] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:21:47] "POST /pos/checkout/ HTTP/1.1" 200 91
-[18/Nov/2026 20:21:47] "GET /sales/9/receipt/?autoprint=1 HTTP/1.1" 200 6698
-[18/Nov/2026 20:21:48] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:21:48] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:21:52] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:21:52] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:30:12] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:31:09] "GET /products/ HTTP/1.1" 200 18048
+[19/Nov/2026 06:31:09] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:31:09] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:11] "GET /products/ HTTP/1.1" 200 18048
+[19/Nov/2026 06:31:11] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:13] "GET /products/1/edit/ HTTP/1.1" 200 18934
+[19/Nov/2026 06:31:13] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:21:54] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:21:55] "GET /pos/master-receipts/ HTTP/1.1" 200 17802
-[18/Nov/2026 20:21:55] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:13] "GET /sw.js HTTP/1.1" 404 9782
 Not Found: /sw.js
-[18/Nov/2026 20:21:58] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:22:44] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:22:44] "GET /manifest.json HTTP/1.1" 200 169
-[18/Nov/2026 20:22:45] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:22:45] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:15] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:31:25] "POST /products/1/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:31:25] "GET /products/ HTTP/1.1" 200 18445
+[19/Nov/2026 06:31:25] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 200 28366
+[19/Nov/2026 06:31:25] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:31:25] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:22:48] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:22:56] "POST /pos/checkout/ HTTP/1.1" 200 92
-[18/Nov/2026 20:22:56] "GET /sales/10/receipt/?autoprint=1 HTTP/1.1" 200 6686
-[18/Nov/2026 20:22:56] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:23:01] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:23:01] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:27] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:31:51] "GET /products/2/edit/ HTTP/1.1" 200 18930
+[19/Nov/2026 06:31:51] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:23:04] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:23:05] "GET /pos/master-receipts/ HTTP/1.1" 200 18201
-[18/Nov/2026 20:23:05] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:31:53] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:16] "POST /products/2/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:32:16] "GET /products/ HTTP/1.1" 200 18446
+[19/Nov/2026 06:32:16] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:32:16] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:32:16] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:23:07] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:23:35] "POST /pos/master-receipts/create/ HTTP/1.1" 302 0
-[18/Nov/2026 20:23:35] "GET /pos/master-receipts/3/ HTTP/1.1" 200 17260
-[18/Nov/2026 20:23:35] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:23:35] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:32:18] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:22] "GET /products/1/edit/ HTTP/1.1" 200 18934
+[19/Nov/2026 06:32:22] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:23:37] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:24:41] "POST /pos/master-receipts/3/ HTTP/1.1" 302 0
-[18/Nov/2026 20:24:41] "GET /pos/master-receipts/3/ HTTP/1.1" 200 17673
-[18/Nov/2026 20:24:41] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:32:24] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:27] "POST /products/1/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:32:27] "GET /products/ HTTP/1.1" 200 18446
+[19/Nov/2026 06:32:27] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:32:27] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
 Not Found: /sw.js
-[18/Nov/2026 20:24:43] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:24:43] "GET /pos/master-receipts/ HTTP/1.1" 200 17995
-[18/Nov/2026 20:24:44] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:32:29] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:36] "GET /products/1/edit/ HTTP/1.1" 200 18934
+[19/Nov/2026 06:32:36] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:24:46] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:26:53] "GET /categories/ HTTP/1.1" 200 22259
-[18/Nov/2026 20:26:53] "GET /manifest.json HTTP/1.1" 200 169
-[18/Nov/2026 20:26:54] "GET /categories/ HTTP/1.1" 200 22259
-[18/Nov/2026 20:26:54] "GET /manifest.json HTTP/1.1" 200 169
-[18/Nov/2026 20:26:56] "GET /categories/ HTTP/1.1" 200 22259
-[18/Nov/2026 20:26:56] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:32:39] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:42] "POST /products/1/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:32:42] "GET /products/ HTTP/1.1" 200 18449
+[19/Nov/2026 06:32:42] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:32:42] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:32:43] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:26:57] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:32:44] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:33:11] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:33:11] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:26:58] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:28:15] "GET /sales/ HTTP/1.1" 200 15938
-[18/Nov/2026 20:28:16] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:33:13] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:40:22] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:40:22] "GET /products/ HTTP/1.1" 200 20032
+[19/Nov/2026 06:40:23] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:40:23] "GET /media/products/S100.png HTTP/1.1" 200 2699
+[19/Nov/2026 06:40:23] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:40:23] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:28:18] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:28:18] "GET /sales/10/receipt/ HTTP/1.1" 200 6686
-[18/Nov/2026 20:28:18] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:28:19] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:40:25] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:40:26] "GET /products/ HTTP/1.1" 200 19624
+[19/Nov/2026 06:40:26] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:40:26] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:40:27] "GET /products/ HTTP/1.1" 200 19624
+[19/Nov/2026 06:40:27] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:40:27] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:28:21] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:39:37] "GET /sales/10/receipt/ HTTP/1.1" 200 8743
-[18/Nov/2026 20:39:38] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:39:38] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:39:40] "GET /static/core/favicon.ico HTTP/1.1" 304 0
+[19/Nov/2026 06:40:28] "GET /sw.js HTTP/1.1" 404 9782
 Not Found: /sw.js
-[18/Nov/2026 20:39:41] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:42:08] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:42:09] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:40:29] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:40:33] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:40:33] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:42:12] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:45:37] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:45:38] "GET /static/core/logo.png HTTP/1.1" 304 0
-[18/Nov/2026 20:45:38] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:40:35] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:43:11] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:43:11] "GET /products/ HTTP/1.1" 200 21657
+[19/Nov/2026 06:43:11] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:43:11] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 200 4066
+[19/Nov/2026 06:43:11] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:43:11] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:43:11] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:45:41] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:45:42] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:45:42] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:43:14] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:43:25] "GET /products/1/edit/ HTTP/1.1" 200 18937
+[19/Nov/2026 06:43:25] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:45:44] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:45:50] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:45:50] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:43:28] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:43:31] "POST /products/1/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 06:43:31] "GET /products/ HTTP/1.1" 200 21653
+[19/Nov/2026 06:43:31] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:43:31] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:43:31] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:45:52] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:46:18] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:18] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:43:33] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:43:41] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:43:41] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:46:20] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:46:22] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:22] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:23] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:23] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:24] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:24] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:24] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:24] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:24] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:25] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:25] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:25] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:25] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:25] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:25] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:25] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:25] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:26] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:26] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:26] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:26] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:26] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:27] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:27] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:27] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:27] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
-[18/Nov/2026 20:46:27] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:46:27] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:43:44] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:45:40] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:45:40] "GET /products/ HTTP/1.1" 200 23250
+[19/Nov/2026 06:45:40] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:45:40] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:45:40] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:45:40] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:45:40] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 200 2809
+[19/Nov/2026 06:45:40] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:46:30] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:47:48] "GET /sales/10/receipt/ HTTP/1.1" 200 8525
-[18/Nov/2026 20:47:50] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:45:43] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:45:48] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:45:48] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:47:52] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:48:33] "GET /sales/10/receipt/ HTTP/1.1" 200 8371
-[18/Nov/2026 20:48:34] "GET /static/core/app.css HTTP/1.1" 304 0
-[18/Nov/2026 20:48:34] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:45:50] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:46:00] "GET /products/ HTTP/1.1" 200 22842
+[19/Nov/2026 06:46:00] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:46:00] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:46:00] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
 Not Found: /sw.js
-[18/Nov/2026 20:48:36] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:48:46] "GET /sales/10/receipt/ HTTP/1.1" 200 8525
-[18/Nov/2026 20:48:46] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 06:46:02] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:46:04] "GET /products/4/edit/ HTTP/1.1" 200 18978
+[19/Nov/2026 06:46:04] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:48:48] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:49:13] "GET /pos/ HTTP/1.1" 200 20610
-[18/Nov/2026 20:49:13] "GET /media/products/coco_cola_WDS9JTv.png HTTP/1.1" 304 0
-[18/Nov/2026 20:49:13] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:46:06] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:46:27] "GET /products/ HTTP/1.1" 200 22842
+[19/Nov/2026 06:46:27] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:46:27] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:46:27] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:46:27] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:49:15] "GET /sw.js HTTP/1.1" 404 9782
-[18/Nov/2026 20:49:18] "GET /settings/ HTTP/1.1" 200 15138
-[18/Nov/2026 20:49:18] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:46:29] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:46:29] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:46:29] "GET /manifest.json HTTP/1.1" 200 169
 Not Found: /sw.js
-[18/Nov/2026 20:49:20] "GET /sw.js HTTP/1.1" 404 9782
-W:\POS projects\POS\bajwa_traders\core\models.py changed, reloading.
-Performing system checks...
-
-System check identified no issues (0 silenced).
-November 18, 2026 - 19:56:59
-Django version 5.2.19, using settings 'config.settings'
-Starting development server at http://0.0.0.0:8000/
-Quit the server with CTRL-BREAK.
-
-WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
-For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
-Watching for file changes with StatReloader
-Exception in thread django-main-thread:
-Traceback (most recent call last):
-  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1082, in _bootstrap_inner
-    self._context.run(self.run)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\threading.py", line 1024, in run
-    self._target(*self._args, **self._kwargs)
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
-    fn(*args, **kwargs)
-    ~~^^^^^^^^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\commands\runserver.py", line 134, in inner_run
-    self.check(**check_kwargs)
-    ~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\management\base.py", line 496, in check
-    all_issues = checks.run_checks(
-        app_configs=app_configs,
-    ...<2 lines>...
-        databases=databases,
-    )
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\registry.py", line 90, in run_checks
-    new_errors = check(app_configs=app_configs, databases=databases)
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 44, in check_url_namespaces_unique
-    all_namespaces = _load_all_namespaces(resolver)
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\core\checks\urls.py", line 63, in _load_all_namespaces
-    url_patterns = getattr(resolver, "url_patterns", [])
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
-    res = instance.__dict__[self.name] = self.func(instance)
-                                         ~~~~~~~~~^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 718, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-                       ^^^^^^^^^^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
-    res = instance.__dict__[self.name] = self.func(instance)
-                                         ~~~~~~~~~^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\resolvers.py", line 711, in urlconf_module
-    return import_module(self.urlconf_name)
-  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
-  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
-  File "W:\POS projects\POS\bajwa_traders\config\urls.py", line 13, in <module>
-    path("", include("core.urls")),
-             ~~~~~~~^^^^^^^^^^^^^
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\urls\conf.py", line 39, in include
-    urlconf_module = import_module(urlconf_module)
-  File "C:\Users\- ZAKI -\AppData\Local\Python\pythoncore-3.14-64\Lib\importlib\__init__.py", line 88, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
-  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
-  File "W:\POS projects\POS\bajwa_traders\core\urls.py", line 3, in <module>
-    from . import views
-  File "W:\POS projects\POS\bajwa_traders\core\views.py", line 24, in <module>
-    from .forms import CategoryForm, ProductForm, SettingForm, SupplierForm
-  File "W:\POS projects\POS\bajwa_traders\core\forms.py", line 12, in <module>
-    class SettingForm(forms.ModelForm):
-        class Meta: model=ShopSetting; fields=['shop_name','shop_name_urdu','address','phone','receipt_footer','paper_width']
-  File "W:\POS projects\POS\bajwa_traders\.venv\Lib\site-packages\django\forms\models.py", line 334, in __new__
-    raise FieldError(message)
-django.core.exceptions.FieldError: Unknown field(s) (shop_name_urdu) specified for ShopSetting
+[19/Nov/2026 06:46:31] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:48:48] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:48:48] "GET /products/ HTTP/1.1" 200 24867
+[19/Nov/2026 06:48:49] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:48:49] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:48:49] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:48:49] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:48:49] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:48:49] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:48:49] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 200 10784
+Not Found: /sw.js
+[19/Nov/2026 06:48:51] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:49:03] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:49:03] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 06:49:05] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:50:45] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:50:45] "GET /products/ HTTP/1.1" 200 26498
+[19/Nov/2026 06:50:45] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:50:45] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:50:45] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 200 13774
+Not Found: /sw.js
+[19/Nov/2026 06:50:48] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:51:18] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:51:18] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 06:51:20] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:53:19] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:53:19] "GET /products/ HTTP/1.1" 200 28098
+[19/Nov/2026 06:53:19] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:19] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:19] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:19] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:19] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 200 14807
+[19/Nov/2026 06:53:19] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:53:20] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:20] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:53:20] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 06:53:22] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:53:32] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:53:32] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 06:53:34] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:56:12] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:56:12] "GET /products/ HTTP/1.1" 200 29705
+[19/Nov/2026 06:56:12] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 200 6428
+[19/Nov/2026 06:56:12] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:56:12] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:56:12] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 06:56:15] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:56:19] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:56:20] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 06:56:22] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:58:43] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 06:58:43] "GET /products/ HTTP/1.1" 200 31339
+[19/Nov/2026 06:58:43] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 200 11333
+[19/Nov/2026 06:58:43] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 06:58:43] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 06:58:43] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 06:58:46] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 06:58:51] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 06:58:51] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 06:58:53] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:00:35] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:00:35] "GET /products/ HTTP/1.1" 200 32932
+[19/Nov/2026 07:00:35] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 200 10412
+[19/Nov/2026 07:00:35] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:00:35] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:00:35] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:00:38] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:00:39] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:00:39] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:00:42] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:02:39] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:02:39] "GET /products/ HTTP/1.1" 200 34521
+[19/Nov/2026 07:02:39] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 200 10698
+[19/Nov/2026 07:02:39] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:02:39] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:02:39] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:02:42] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:02:47] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:02:47] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:02:50] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:04:16] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:04:16] "GET /products/ HTTP/1.1" 200 36129
+[19/Nov/2026 07:04:16] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 200 9254
+[19/Nov/2026 07:04:16] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:04:17] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:04:17] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:04:19] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:04:25] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:04:25] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:04:27] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:06:00] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:06:00] "GET /products/ HTTP/1.1" 200 37731
+[19/Nov/2026 07:06:00] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:06:01] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 200 15171
+[19/Nov/2026 07:06:01] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:06:01] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:06:03] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:06:12] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:06:12] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:06:14] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:07:45] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:07:45] "GET /products/ HTTP/1.1" 200 39330
+[19/Nov/2026 07:07:46] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:07:46] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 200 27020
+[19/Nov/2026 07:07:46] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:07:46] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:07:48] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:07:52] "GET /products/14/edit/ HTTP/1.1" 200 18957
+[19/Nov/2026 07:07:52] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:07:54] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:08:00] "POST /products/14/edit/ HTTP/1.1" 302 0
+[19/Nov/2026 07:08:00] "GET /products/ HTTP/1.1" 200 39320
+[19/Nov/2026 07:08:00] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:08:00] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 304 0
+[19/Nov/2026 07:08:01] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:08:03] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:08:03] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:08:03] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:08:05] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:10:01] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:10:01] "GET /products/ HTTP/1.1" 200 40931
+[19/Nov/2026 07:10:01] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:01] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:01] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:01] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:01] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:01] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:10:02] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:10:02] "GET /media/products/Tea_Pack_190g.png HTTP/1.1" 200 20442
+[19/Nov/2026 07:10:02] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:10:04] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:10:08] "GET /products/add/ HTTP/1.1" 200 18619
+[19/Nov/2026 07:10:08] "GET /manifest.json HTTP/1.1" 200 169
+Not Found: /sw.js
+[19/Nov/2026 07:10:11] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:12:49] "POST /products/add/ HTTP/1.1" 302 0
+[19/Nov/2026 07:12:49] "GET /products/ HTTP/1.1" 200 42507
+[19/Nov/2026 07:12:49] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:49] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:49] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:49] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:12:49] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:49] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Sugar_Bag_1kg.png HTTP/1.1" 200 7134
+[19/Nov/2026 07:12:50] "GET /media/products/Tea_Pack_190g.png HTTP/1.1" 304 0
+[19/Nov/2026 07:12:50] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:12:53] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:13:10] "GET /pos/ HTTP/1.1" 200 32634
+[19/Nov/2026 07:13:10] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:13:10] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:13:10] "GET /media/products/Sugar_Bag_1kg.png HTTP/1.1" 304 0
+[19/Nov/2026 07:13:10] "GET /media/products/Tea_Pack_190g.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:13:13] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:14:18] "POST /pos/checkout/ HTTP/1.1" 200 92
+[19/Nov/2026 07:14:18] "GET /sales/11/receipt/?autoprint=1 HTTP/1.1" 200 9890
+[19/Nov/2026 07:14:18] "GET /static/core/logo.png HTTP/1.1" 304 0
+[19/Nov/2026 07:14:19] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
+[19/Nov/2026 07:18:12] "GET /pos/ HTTP/1.1" 200 32634
+[19/Nov/2026 07:18:12] "GET /media/products/S100.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/coco_cola_A7sjGuv.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:18:13] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Mirinda_Orange_300ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/pepsi.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Red_Bull_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Sting_Gold_Rush_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Sugar_Bag_1kg.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Tea_Pack_190g.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Sprite_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:18:13] "GET /media/products/Sting_Berry_500ml.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:18:16] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:20:27] "GET /pos/ HTTP/1.1" 200 32634
+[19/Nov/2026 07:20:28] "GET /media/products/Apple_Juice_250ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Aquafina_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Kinley_1.5L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Mango_Juice_1L.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /manifest.json HTTP/1.1" 200 169
+[19/Nov/2026 07:20:28] "GET /media/products/Nestle_Pure_Life_500ml.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/LU_Prince_Biscuit.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Sooper_Biscuit_Pack.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Sugar_Bag_1kg.png HTTP/1.1" 304 0
+[19/Nov/2026 07:20:28] "GET /media/products/Tea_Pack_190g.png HTTP/1.1" 304 0
+Not Found: /sw.js
+[19/Nov/2026 07:20:31] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:20:47] "POST /pos/checkout/ HTTP/1.1" 200 92
+[19/Nov/2026 07:20:48] "GET /sales/12/receipt/?autoprint=1 HTTP/1.1" 200 1547
+Not Found: /sw.js
+[19/Nov/2026 07:20:51] "GET /sw.js HTTP/1.1" 404 9782
+[19/Nov/2026 07:21:46] "GET /sales/12/receipt/?autoprint=1 HTTP/1.1" 200 10510
+[19/Nov/2026 07:21:48] "GET /static/fonts/NotoNastaliqUrdu-Regular.ttf HTTP/1.1" 404 1916
