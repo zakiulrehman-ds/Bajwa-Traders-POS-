@@ -5,6 +5,7 @@
 {% block content %}
 <form method="post" class="panel form-panel">
   {% csrf_token %}
+  <input type="hidden" name="action" value="save_settings">
   <h3>Shop identity &amp; receipt settings</h3>
   <p class="muted">These details appear on printed customer receipts.</p>
 
@@ -24,6 +25,31 @@
 
 <div class="panel info-panel">
   <h3>Local data &amp; backup</h3>
-  <p>Store records are saved in <code>db.sqlite3</code> and backed up automatically every day at <strong>9:00 PM</strong> to <code>backups\</code> and drive <code>D:</code>.</p>
+  <p>Store records are saved in <code>db.sqlite3</code> and backed up automatically every day at <strong>9:00 PM</strong> to <code>backups\</code> and drive <code>D:</code> (keeping the last <strong>30 days</strong>).</p>
+
+  <div class="form-actions" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+    <form method="post" style="display: inline;">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="manual_backup">
+      <button type="submit" class="btn primary">Create manual backup now</button>
+    </form>
+  </div>
+
+  <hr style="margin: 16px 0;">
+
+  <h4>Restore from backup</h4>
+  <p class="muted">Restoring replaces current store data with the selected backup (a safety copy of the current database is saved first).</p>
+
+  <form method="post" onsubmit="return confirm('Are you sure you want to restore the selected backup? Current data will be replaced after saving a safety copy.');" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px;">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="restore_backup">
+    <select name="backup_file" class="field" required>
+      <option value="">-- Select a backup file --</option>
+      {% for b in backup_files %}
+        <option value="{{ b }}">{{ b }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn">Restore backup</button>
+  </form>
 </div>
 {% endblock %}

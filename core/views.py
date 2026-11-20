@@ -1,16 +1,20 @@
 import base64
 import csv
 import json
+import shutil
 import socket
-from datetime import timedelta
+import sqlite3
+from datetime import datetime, timedelta
 from decimal import Decimal, InvalidOperation
 from io import BytesIO
+from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.db import transaction
+from django.db import connections, transaction
 from django.db.models import Count, F, Sum
 from django.db.models.deletion import ProtectedError
 from django.db.models.functions import TruncDate, TruncMonth
@@ -560,12 +564,109 @@ def reports(request):
 @login_required
 def settings_view(request):
     obj = ShopSetting.current()
-    form = SettingForm(request.POST or None, instance=obj)
-    if form.is_valid():
-        form.save()
-        messages.success(request, 'Shop settings updated.')
-        return redirect('settings')
-    return render(request, 'core/settings.html', base_context() | {'form': form})
+    base_dir = Path(settings.BASE_DIR)
+    backups_dir = base_dir / 'backups'
+    backups_dir.mkdir(exist_ok=True)
+    offdrive_dir = Path('D:/Bajwa_Traders_Backups')
+    log_file = backups_dir / 'backup.log'
+    db_path = base_dir / 'db.sqlite3'
+
+    def write_log(text):
+        now_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f'[{now_str}] {text}\n')
+
+    if request.method == 'POST':
+        action = request.POST.get('action', 'save_settings')
+
+        if action == 'manual_backup':
+            try:
+                if not db_path.exists():
+                    raise FileNotFoundError('db.sqlite3 not found.')
+
+                stamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
+                local_backup = backups_dir / f'bajwa_traders_{stamp}.sqlite3'
+
+                src = sqlite3.connect(str(db_path), timeout=30.0)
+                dst = sqlite3.connect(str(local_backup))
+                src.backup(dst, pages=100)
+                dst.close()
+                src.close()
+                write_log(f'OK (Manual): Local backup created -> {local_backup.name}')
+
+                if Path('D:/').exists():
+                    offdrive_dir.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(local_backup, offdrive_dir / local_backup.name)
+                    media_dir = base_dir / 'media'
+                    if media_dir.exists():
+                        shutil.copytree(media_dir, offdrive_dir / 'media', dirs_exist_ok=True)
+                    write_log(f'OK (Manual): Off-drive copy saved -> {offdrive_dir / local_backup.name}')
+
+                messages.success(request, f'Manual backup created: {local_backup.name}')
+            except Exception as e:
+                write_log(f'ERROR (Manual): {e}')
+                messages.error(request, f'Backup failed: {e}')
+            return redirect('settings')
+
+        elif action == 'restore_backup':
+            selected_name = request.POST.get('backup_file', '').strip()
+            target_file = (backups_dir / selected_name).resolve()
+
+            if (
+                not selected_name
+                or target_file.parent != backups_dir.resolve()
+                or not target_file.exists()
+            ):
+                messages.error(request, 'Please select a valid backup file.')
+                return redirect('settings')
+
+            try:
+                stamp = datetime.now().strftime('%Y-%m-%d_%H-%M')
+                safety_copy = backups_dir / f'pre_restore_{stamp}.sqlite3'
+
+                if db_path.exists():
+                    src_live = sqlite3.connect(str(db_path), timeout=30.0)
+                    dst_safety = sqlite3.connect(str(safety_copy))
+                    src_live.backup(dst_safety, pages=100)
+                    dst_safety.close()
+                    src_live.close()
+
+                connections.close_all()
+
+                src_bak = sqlite3.connect(str(target_file), timeout=30.0)
+                dst_live = sqlite3.connect(str(db_path), timeout=30.0)
+                src_bak.backup(dst_live, pages=100)
+                dst_live.close()
+                src_bak.close()
+
+                write_log(f'OK (Restore): Restored from {selected_name} (safety: {safety_copy.name})')
+                messages.success(
+                    request,
+                    f'Database restored from {selected_name}. Safety backup saved as {safety_copy.name}.',
+                )
+            except Exception as e:
+                write_log(f'ERROR (Restore): {e}')
+                messages.error(request, f'Restore failed: {e}')
+            return redirect('settings')
+
+        else:
+            form = SettingForm(request.POST, request.FILES, instance=obj)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Shop settings updated.')
+                return redirect('settings')
+    else:
+        form = SettingForm(instance=obj)
+
+    backup_files = sorted(
+        [f.name for f in backups_dir.glob('*.sqlite3')],
+        reverse=True,
+    )
+
+    return render(request, 'core/settings.html', base_context() | {
+        'form': form,
+        'backup_files': backup_files,
+    })
 
 
 @login_required
@@ -624,6 +725,7 @@ def manifest(request):
         'theme_color': '#123c32',
         'icons': [],
     })
+
 
 @login_required
 def master_receipts(request):

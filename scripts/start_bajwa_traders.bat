@@ -2,15 +2,14 @@
 setlocal
 cd /d "%~dp0.."
 
-if not exist .venv\Scripts\pythonw.exe (
-    echo Bajwa Traders is not installed. Run setup_windows.bat first.
-    pause
+if not exist ".venv\Scripts\pythonw.exe" (
+    msg * "Bajwa Traders is not installed. Run setup_windows.bat first."
     exit /b 1
 )
 
-netstat -ano | findstr ":8000 " | findstr "LISTENING" >nul
+netstat -ano | findstr /R ":8000 " | findstr "LISTENING" >nul
 if errorlevel 1 (
-    start "" /B cmd /c ".venv\Scripts\pythonw.exe manage.py runserver 0.0.0.0:8000 > server.log 2>&1"
+    start "" /B ".venv\Scripts\pythonw.exe" manage.py runserver 0.0.0.0:8000 > server.log 2>&1
     timeout /t 3 /nobreak >nul
 )
 
