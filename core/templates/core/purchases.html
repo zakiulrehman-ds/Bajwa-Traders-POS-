@@ -3,8 +3,72 @@
 {% block page_title %}Stock receiving{% endblock %}
 
 {% block content %}
+<style>
+    .purchase-search-wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .purchase-search-input {
+        padding: 0.45rem 0.7rem !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 6px !important;
+        width: 240px !important;
+        max-width: 100% !important;
+        background-color: #ffffff !important;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .purchase-search-input:focus {
+        outline: none !important;
+        border-color: #065f46 !important;
+        box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.18) !important;
+    }
+
+    .panel.table-wrap table {
+        display: table;
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .panel.table-wrap tr {
+        display: table-row;
+    }
+
+    .panel.table-wrap th,
+    .panel.table-wrap td {
+        display: table-cell;
+        white-space: nowrap;
+        width: auto;
+    }
+
+    .panel.table-wrap tr.hidden-row {
+        display: none !important;
+    }
+</style>
+
 <div class="page-actions">
-    <p class="muted">Record supplier deliveries to increase inventory.</p>
+    <form method="get" action="" autocomplete="off" class="purchase-search-wrap" onsubmit="event.preventDefault(); filterPurchasesTable();">
+        <input
+            type="text"
+            id="purchase-search-input"
+            name="q"
+            value="{{ query|default:'' }}"
+            placeholder="Search reference, supplier, or invoice..."
+            aria-label="Search purchases"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            class="purchase-search-input"
+            oninput="filterPurchasesTable()"
+        >
+        <button type="submit" class="btn">Search</button>
+        <button type="button" id="clear-purchase-search" class="btn" style="display: none;" onclick="clearPurchasesSearch()">Clear</button>
+    </form>
+
     <a class="btn primary" href="{% url 'purchase_add' %}">＋ Record purchase</a>
 </div>
 
@@ -20,9 +84,9 @@
                 <th>Paid</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="purchases-table-body">
             {% for p in purchases %}
-                <tr>
+                <tr class="purchase-row">
                     <td class="font-bold text-slate-900">PUR-{{ p.pk }}</td>
                     <td>{{ p.supplier|default:'—' }}</td>
                     <td class="font-mono text-xs">{{ p.invoice_no|default:'—' }}</td>
@@ -31,11 +95,47 @@
                     <td class="font-semibold text-emerald-800">Rs {{ p.paid_amount }}</td>
                 </tr>
             {% empty %}
-                <tr>
+                <tr id="empty-purchases-row">
                     <td colspan="6" class="empty-state text-center py-6 text-slate-500">No purchases recorded yet.</td>
                 </tr>
             {% endfor %}
+            <tr id="no-purchase-match" class="hidden-row">
+                <td colspan="6" class="empty-state text-center py-6 text-slate-500">No matching purchases found.</td>
+            </tr>
         </tbody>
     </table>
 </div>
+
+<script>
+function filterPurchasesTable() {
+    const input = document.getElementById("purchase-search-input");
+    const clearBtn = document.getElementById("clear-purchase-search");
+    const noMatchRow = document.getElementById("no-purchase-match");
+    const term = input.value.toLowerCase().trim();
+    const rows = document.querySelectorAll("#purchases-table-body tr.purchase-row");
+    let visibleCount = 0;
+
+    rows.forEach((row) => {
+        const text = (row.textContent || row.innerText).toLowerCase();
+        const matches = text.includes(term);
+        row.classList.toggle("hidden-row", !matches);
+        if (matches) visibleCount++;
+    });
+
+    clearBtn.style.display = term.length > 0 ? "inline-block" : "none";
+
+    if (noMatchRow && rows.length > 0) {
+        noMatchRow.classList.toggle("hidden-row", !(term.length > 0 && visibleCount === 0));
+    }
+}
+
+function clearPurchasesSearch() {
+    const input = document.getElementById("purchase-search-input");
+    input.value = "";
+    filterPurchasesTable();
+    input.focus();
+}
+
+document.addEventListener("DOMContentLoaded", filterPurchasesTable);
+</script>
 {% endblock %}

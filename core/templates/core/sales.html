@@ -1,1 +1,117 @@
-{% extends 'core/base.html' %}{% block page_title %}Receipt history{% endblock %}{% block content %}<div class="page-actions"><p class="muted">Search past bills and print a duplicate receipt.</p><a class="btn primary" href="{% url 'pos' %}">＋ New bill</a></div><div class="panel table-wrap"><table><thead><tr><th>Bill number</th><th>Date & time</th><th>Customer</th><th>Cashier</th><th>Total</th><th>Paid</th><th>Change</th><th></th></tr></thead><tbody>{% for s in sales %}<tr><td><b>{{ s.bill_no }}</b></td><td>{{ s.created_at|date:'d M Y, h:i A' }}</td><td>{{ s.customer_name|default:'Walk-in' }}</td><td>{{ s.cashier|default:'—' }}</td><td>Rs {{ s.total }}</td><td>Rs {{ s.paid }}</td><td>Rs {{ s.change }}</td><td><a class="table-action" href="{% url 'receipt' s.pk %}">Print receipt ↗</a></td></tr>{% empty %}<tr><td colspan="8" class="empty-state">No bills yet.</td></tr>{% endfor %}</tbody></table></div>{% endblock %}
+{% extends 'core/base.html' %}
+
+{% block page_title %}Receipt history{% endblock %}
+
+{% block content %}
+<style>
+    .receipt-search-input {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        min-width: 260px;
+        background-color: #ffffff;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .receipt-search-input:focus {
+        outline: none;
+        border-color: #065f46;
+        box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.18);
+    }
+</style>
+
+<div class="page-actions" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+    <form method="get" action="" autocomplete="off" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
+        <input
+            type="text"
+            id="receipt-search-input"
+            name="q"
+            value="{{ query|default:'' }}"
+            placeholder="Search bill no, customer, or phone..."
+            aria-label="Search receipts"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            class="receipt-search-input"
+            oninput="filterSalesTable()"
+        >
+        <button type="submit" class="btn">Search</button>
+        <button type="button" id="clear-search-btn" class="btn" style="display: none;" onclick="clearSalesSearch()">Clear</button>
+    </form>
+
+    <a class="btn primary" href="{% url 'pos' %}">＋ New bill</a>
+</div>
+
+<div class="panel table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Bill number</th>
+                <th>Date &amp; time</th>
+                <th>Customer</th>
+                <th>Cashier</th>
+                <th>Total</th>
+                <th>Paid</th>
+                <th>Change</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="sales-table-body">
+            {% for s in sales %}
+                <tr class="sale-row" data-phone="{{ s.customer_phone|default:''|lower }}">
+                    <td><b>{{ s.bill_no }}</b></td>
+                    <td>{{ s.created_at|date:'d M Y, h:i A' }}</td>
+                    <td>{{ s.customer_name|default:'Walk-in' }}</td>
+                    <td>{{ s.cashier|default:'—' }}</td>
+                    <td>Rs {{ s.total|floatformat:0 }}</td>
+                    <td>Rs {{ s.paid|floatformat:0 }}</td>
+                    <td>Rs {{ s.change|floatformat:0 }}</td>
+                    <td>
+                        <a class="table-action" href="{% url 'receipt' s.pk %}">Print receipt ↗</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="8" class="empty-state">No bills yet.</td>
+                </tr>
+            {% endfor %}
+            <tr id="no-search-match" style="display: none;">
+                <td colspan="8" class="empty-state">No matching bills found.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+function filterSalesTable() {
+    const input = document.getElementById("receipt-search-input");
+    const clearBtn = document.getElementById("clear-search-btn");
+    const noMatchRow = document.getElementById("no-search-match");
+    const term = input.value.toLowerCase().trim();
+    const rows = document.querySelectorAll("#sales-table-body tr.sale-row");
+    let visibleCount = 0;
+
+    rows.forEach((row) => {
+        const text = (row.innerText + " " + (row.dataset.phone || "")).toLowerCase();
+        const matches = text.includes(term);
+        row.style.display = matches ? "" : "none";
+        if (matches) visibleCount++;
+    });
+
+    clearBtn.style.display = term.length > 0 ? "inline-block" : "none";
+    if (noMatchRow && rows.length > 0) {
+        noMatchRow.style.display = visibleCount === 0 ? "" : "none";
+    }
+}
+
+function clearSalesSearch() {
+    const input = document.getElementById("receipt-search-input");
+    input.value = "";
+    filterSalesTable();
+    input.focus();
+}
+
+document.addEventListener("DOMContentLoaded", filterSalesTable);
+</script>
+{% endblock %}
