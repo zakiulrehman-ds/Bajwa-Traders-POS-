@@ -3,53 +3,109 @@
 {% block page_title %}Shop settings{% endblock %}
 
 {% block content %}
-<form method="post" class="panel form-panel">
-  {% csrf_token %}
-  <input type="hidden" name="action" value="save_settings">
-  <h3>Shop identity &amp; receipt settings</h3>
-  <p class="muted">These details appear on printed customer receipts.</p>
+<div x-data="{
+        restoreModal: false,
+        selectedBackup: '',
+        openRestoreModal() {
+            const select = this.$refs.backupSelect;
+            if (!select.value) {
+                select.reportValidity();
+                return;
+            }
+            this.selectedBackup = select.value;
+            this.restoreModal = true;
+        }
+     }"
+     @keydown.escape.window="restoreModal = false">
 
-  <div class="form-grid">
-    {% for f in form %}
-      <div class="form-field">
-        <label>{{ f.label }}</label>
-        {{ f }}
-      </div>
-    {% endfor %}
-  </div>
+  <form method="post" class="panel form-panel">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="save_settings">
+    <h3>Shop identity &amp; receipt settings</h3>
+    <p class="muted">These details appear on printed customer receipts.</p>
 
-  <div class="form-actions">
-    <button type="submit" class="btn primary">Save settings</button>
-  </div>
-</form>
+    <div class="form-grid">
+      {% for f in form %}
+        <div class="form-field">
+          <label>{{ f.label }}</label>
+          {{ f }}
+        </div>
+      {% endfor %}
+    </div>
 
-<div class="panel info-panel">
-  <h3>Local data &amp; backup</h3>
-  <p>Store records are saved in <code>db.sqlite3</code> and backed up automatically every day at <strong>9:00 PM</strong> to <code>backups\</code> and drive <code>D:</code> (keeping the last <strong>30 days</strong>).</p>
+    <div class="form-actions">
+      <button type="submit" class="btn primary">Save settings</button>
+    </div>
+  </form>
 
-  <div class="form-actions" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
-    <form method="post" style="display: inline;">
+  <div class="panel info-panel">
+    <h3>Local data &amp; backup</h3>
+    <p>Store records are saved in <code>db.sqlite3</code> and backed up automatically every day at <strong>9:00 PM</strong> to <code>backups\</code> and drive <code>D:</code> (keeping the last <strong>30 days</strong>).</p>
+
+    <div class="form-actions" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+      <form method="post" style="display: inline;">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="manual_backup">
+        <button type="submit" class="btn primary">Create manual backup now</button>
+      </form>
+    </div>
+
+    <hr style="margin: 16px 0;">
+
+    <h4>Restore from backup</h4>
+    <p class="muted">Restoring replaces current store data with the selected backup (a safety copy of the current database is saved first).</p>
+
+    <form x-ref="restoreForm"
+          method="post"
+          @submit.prevent="openRestoreModal()"
+          style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px;">
       {% csrf_token %}
-      <input type="hidden" name="action" value="manual_backup">
-      <button type="submit" class="btn primary">Create manual backup now</button>
+      <input type="hidden" name="action" value="restore_backup">
+      <select x-ref="backupSelect" name="backup_file" class="field" required>
+        <option value="">-- Select a backup file --</option>
+        {% for b in backup_files %}
+          <option value="{{ b }}">{{ b }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" class="btn">Restore backup</button>
     </form>
   </div>
 
-  <hr style="margin: 16px 0;">
+  <!-- Custom Restore Confirmation Modal (Matching categories.html) -->
+  <div x-show="restoreModal"
+       x-transition.opacity.duration.150ms
+       style="display: none;"
+       class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/45 backdrop-blur-[1px] p-4">
+    <div @click.away="restoreModal = false"
+         class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl border border-slate-200">
+      <div class="flex items-start gap-3.5">
+        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-50 text-red-600">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-base font-semibold text-slate-900 m-0">Restore backup?</h4>
+          <p class="mt-1 text-sm text-slate-600">
+            Are you sure you want to restore <strong class="text-slate-900" x-text="selectedBackup"></strong>? Current data will be replaced after saving a safety copy.
+          </p>
+        </div>
+      </div>
 
-  <h4>Restore from backup</h4>
-  <p class="muted">Restoring replaces current store data with the selected backup (a safety copy of the current database is saved first).</p>
-
-  <form method="post" onsubmit="return confirm('Are you sure you want to restore the selected backup? Current data will be replaced after saving a safety copy.');" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px;">
-    {% csrf_token %}
-    <input type="hidden" name="action" value="restore_backup">
-    <select name="backup_file" class="field" required>
-      <option value="">-- Select a backup file --</option>
-      {% for b in backup_files %}
-        <option value="{{ b }}">{{ b }}</option>
-      {% endfor %}
-    </select>
-    <button type="submit" class="btn">Restore backup</button>
-  </form>
+      <div class="mt-5 flex items-center justify-end gap-2.5">
+        <button type="button"
+                @click="restoreModal = false"
+                class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer">
+          Cancel
+        </button>
+        <button type="button"
+                @click="restoreModal = false; $refs.restoreForm.submit()"
+                class="rounded-lg bg-red-600 px-4 py-2 text-xs font-semibold text-white hover:bg-red-700 cursor-pointer">
+          Restore
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

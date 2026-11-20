@@ -4,24 +4,92 @@
 
 {% block content %}
 <style>
-    .receipt-search-input {
-        padding: 0.5rem 0.75rem;
+    .sr-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .sr-search-form {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1 1 auto;
+        max-width: 380px;
+        min-width: 0;
+    }
+
+    .sr-search-input {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: 100%;
+        padding: 9px 12px;
         border: 1px solid #d1d5db;
-        border-radius: 6px;
-        min-width: 260px;
-        background-color: #ffffff;
+        border-radius: 7px;
+        background: #ffffff;
+        font-size: 12px;
         transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .receipt-search-input:focus {
+    .sr-search-input:focus {
         outline: none;
         border-color: #065f46;
         box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.18);
     }
+
+    .sr-search-form .btn,
+    .sr-add-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .panel.table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+
+    .panel.table-wrap table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .panel.table-wrap tr {
+        display: table-row;
+    }
+
+    .panel.table-wrap th,
+    .panel.table-wrap td {
+        display: table-cell;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 800px) {
+        .sr-bar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .sr-search-form {
+            flex: none;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .sr-add-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 </style>
 
-<div class="page-actions" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-    <form method="get" action="" autocomplete="off" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
+<div class="sr-bar">
+    <form method="get" action="" autocomplete="off" class="sr-search-form">
         <input
             type="text"
             id="receipt-search-input"
@@ -33,14 +101,14 @@
             autocorrect="off"
             autocapitalize="off"
             spellcheck="false"
-            class="receipt-search-input"
+            class="sr-search-input"
             oninput="filterSalesTable()"
         >
         <button type="submit" class="btn">Search</button>
         <button type="button" id="clear-search-btn" class="btn" style="display: none;" onclick="clearSalesSearch()">Clear</button>
     </form>
 
-    <a class="btn primary" href="{% url 'pos' %}">＋ New bill</a>
+    <a class="btn primary sr-add-btn" href="{% url 'pos' %}">＋ New bill</a>
 </div>
 
 <div class="panel table-wrap">
